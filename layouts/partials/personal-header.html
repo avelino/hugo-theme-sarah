@@ -5,10 +5,7 @@
     </div>
     <div class="col-md-8">
       <p class="personal-profile__name">{{ .Site.Params.Author }}_</p>
-      <p class="personal-profile__work">
-	{{ range $index, $key := .Site.Params.Keywords }}
-	{{ if $index }},{{ end }}{{ $key }}
-	{{ end }}
+      <p class="personal-profile__work">{{ range $index, $key := .Site.Params.Keywords }}{{ if $index }}, {{ end }}{{ $key }}{{ end }}
       </p>
       <div class="personal-profile__contacts">
         <dl class="contact-list contact-list__opacity-titles">
