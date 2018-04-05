@@ -2,6 +2,8 @@
 
 Sarah theme for [Hugo](https://gohugo.io/) static site generator
 
+![Screenshot](images/screenshot.png)
+
 ## Installation
 
 Inside the folder of your Hugo site run:
