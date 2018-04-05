@@ -1,0 +1,36 @@
+.posts{
+
+  .posts__item{
+    margin-bottom: 40px;
+  }
+
+  a{
+    transition: all 0.3s;
+
+    &:hover{
+      text-decoration: none;
+    }
+
+    &:hover .posts__title{
+      text-decoration: underline;
+      color: $color-accent;
+    }
+  }
+
+  .posts__title{
+    font-size: $font-size-t5;
+    line-height: $line-height-t5;
+    font-family: $font-family-title;
+    text-transform: uppercase;
+    color: $color-text-main;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .posts__description{
+    font-size: $font-size-t4;
+    line-height: $line-height-t4;
+    color: $color-text-additional;
+    margin-bottom: 0;
+  }
+}

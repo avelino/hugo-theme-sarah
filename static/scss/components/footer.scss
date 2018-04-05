@@ -1,0 +1,19 @@
+.footer{
+  color: $color-text-light;
+  opacity: 0.4;
+  font-size: $font-size-t4;
+  line-height: $line-height-t4;
+  font-family: $font-family-title;
+  width: 100%;
+  text-align: center;
+  top: 60px;
+  position: relative;
+  margin-bottom: 30px;
+
+  p{
+      a{
+	  color: #fff;
+	  text-decoration: underline;
+      }
+  }
+}

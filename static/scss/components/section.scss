@@ -1,0 +1,22 @@
+.section{
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .section__title{
+    margin-bottom: 40px;
+    font-size: $font-size-t2;
+    line-height: $line-height-t2;
+    font-family: $font-family-title;
+  }
+
+  .section__description{
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}

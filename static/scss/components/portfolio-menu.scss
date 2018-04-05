@@ -1,0 +1,25 @@
+.portfolio-menu{
+
+  //a{
+  //  &:hover{
+  //    text-decoration: none;
+  //    color: $color-accent;
+  //  }
+  //}
+
+
+  .portfolio-menu__link--active{
+    color: $color-accent;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 576px){
+    a{
+      padding-right: 15px;
+
+      &:after{
+        right: 8px;
+      }
+    }
+  }
+}

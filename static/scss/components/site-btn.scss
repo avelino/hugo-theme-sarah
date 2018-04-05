@@ -1,0 +1,43 @@
+.site-btn{
+  background-color: $color-accent;
+  height: 50px;
+  border-radius: 25px;
+  font-size: $font-size-t5;
+  line-height: $line-height-t5;
+  text-transform: uppercase;
+  padding: 15px;
+  min-width: 170px;
+  text-align: center;
+  display: inline-block;
+  color: $color-text-light !important;
+  font-weight: 600;
+  overflow: hidden;
+
+  img{
+    height: 14px;
+    margin-top: -5px;
+    margin-right: 5px;
+  }
+
+  &:hover, &:focus{
+    background-color: $color-accent-additional;
+    text-decoration: none;
+  }
+
+  &.site-btn--form{
+    width: 100%;
+    border: none !important;
+    box-shadow: $box-shadow-btn;
+    position: relative;
+
+    &:hover{
+      background-color: $color-accent-additional !important;
+    }
+
+    &:focus, &:active{
+      box-shadow: none !important;
+    }
+  }
+}
+
+

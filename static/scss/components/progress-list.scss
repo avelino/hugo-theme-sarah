@@ -1,0 +1,40 @@
+.progress-list{
+  margin-top: 30px;
+
+  .progress-list__title{
+    font-family: $font-family-title;
+    font-size: $font-size-t5;
+    line-height: $line-height-t5;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color-text-additional;
+    margin-bottom: 40px;
+  }
+
+  p{
+    width: 100%;
+    font-family: $font-family-additional;
+    font-size: $font-size-t5;
+    line-height: $line-height-t5;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+    .progress-list__skill-title{
+    }
+
+    .progress-list__skill-value{
+      float: right;
+    }
+  }
+
+
+  .progress{
+    height: 6px;
+    margin-bottom: 30px;
+
+    .progress-bar{
+      background-color: $color-accent;
+    }
+  }
+}

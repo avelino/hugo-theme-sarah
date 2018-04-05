@@ -1,0 +1,16 @@
+.tags{
+  li{
+    display: inline-block;
+    font-size: $font-size-t5;
+    line-height: $line-height-t5;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.14);
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+
+    @media screen and (max-width: 990px) {
+      margin-bottom: 10px;
+    }
+  }
+}

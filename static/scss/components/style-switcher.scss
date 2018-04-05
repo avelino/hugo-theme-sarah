@@ -1,0 +1,59 @@
+.style-switcher{
+  position: fixed;
+  right: -90px;
+  bottom: 15%;
+  z-index: 100;
+  transition: all 0.6s;
+
+  .style-switcher__control {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background: #2d2d2d;
+  }
+
+  .style-switcher__control::after {
+    content: "\f013";
+    position: absolute;
+    font-family: "FontAwesome";
+    font-size: 30px;
+    line-height: 1;
+    color: #ffffff;
+    pointer-events: none;
+    transition: all 1.0s;
+    top: 50%;
+    margin-top: -15px;
+    left: 50%;
+    margin-left: -15px;
+  }
+
+  .style-switcher__list {
+    padding: 10px 5px 0px 10px;
+    background: #fefefe;
+    box-shadow: 5px 1px 10px rgba(0,0,0,0.4);
+  }
+
+  .style-switcher__link {
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    transition: all 0.3s;
+  }
+
+  .style-switcher__link--color {
+    background-color: #6d56c1;
+  }
+
+  .style-switcher__link--mono {
+    background-color: #4a4a4a;
+  }
+
+  &.style-switcher--active {
+    right: 0;
+  }
+}

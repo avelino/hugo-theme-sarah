@@ -1,0 +1,196 @@
+.contacts{
+  margin-top: 20px;
+
+  .contacts__list{
+    margin-bottom: 45px;
+  }
+
+  .contacts__social{
+    font-size: $font-size-t4;
+    line-height: $line-height-t4;
+
+    li{
+      margin-bottom: 20px;
+      //
+      //@media screen and (max-width: 760px) {
+      //  display: inline-block;
+      //  margin-right: 20px;
+      //}
+    }
+
+    a{
+      color: $color-text-light;
+      text-decoration: underline;
+      padding: 6px 0px;
+      transition: all 0.3s;
+
+      &:hover{
+        color: $color-accent;
+        text-decoration: none;
+        background-color: $color-text-light;
+      }
+    }
+  }
+
+  .contacts__form{
+
+    .form-group{
+      margin-bottom: 15px;
+      position: relative;
+
+      span{
+        color: #ffffff;
+        position: absolute;
+        top: 10px;
+        text-align: right;
+        opacity: 0;
+        right: 20px;
+        z-index: 0;
+      }
+
+      .form-validation{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 2px;
+        border: 2px solid $color-accent;
+        pointer-events: none;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+    }
+
+    input{
+      width: 100%;
+      background-color: transparent;
+      border-radius: 3px;
+      border: 1px solid #ffffff;
+      padding: 10px;
+      color: $color-text-light;
+      font-size: $font-size-t4;
+      line-height: $line-height-t4;
+      font-family: $font-family-title;
+
+      &::-webkit-input-placeholder{
+        color: $color-text-light;
+        font-size: $font-size-t4;
+        line-height: $line-height-t4;
+        font-family: $font-family-title;
+
+        &[data-touched=true]:invalid ~ .form-invalid-icon{
+          opacity: 1.0;
+        }
+      }
+
+      &::-webkit-contacts-auto-fill-button {
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+      }
+
+      &::-moz-placeholder{
+        color: $color-text-light;
+        font-size: $font-size-t4;
+        line-height: $line-height-t4;
+        font-family: $font-family-title;
+      }
+
+      &:-moz-placeholder{
+        color: $color-text-light;
+        font-size: $font-size-t4;
+        line-height: $line-height-t4;
+        font-family: $font-family-title;
+      }
+
+      &:-ms-input-placeholder{
+        color: $color-text-light;
+        font-size: $font-size-t4;
+        line-height: $line-height-t4;
+        font-family: $font-family-title;
+      }
+
+      &:focus, &:active{
+        box-shadow:inset 0px 0px 5px 0px #FFFFFF;
+        border: 1px solid #ffffff;
+        outline: none;
+      }
+
+      &:invalid{
+        outline: none;
+      }
+
+      &[data-touched=true]:invalid ~ .form-invalid-icon{
+        opacity: 1.0;
+      }
+    }
+
+    textarea{
+      width: 100%;
+      background-color: transparent;
+      border-radius: 3px;
+      border: 1px solid #ffffff;
+      padding: 10px;
+      height: 115px;
+      color: $color-text-light;
+      font-size: $font-size-t4;
+      line-height: $line-height-t4;
+      font-family: $font-family-title;
+
+      &::-webkit-input-placeholder{
+        color: $color-text-light;
+        font-size: $font-size-t4;
+        line-height: $line-height-t4;
+        font-family: $font-family-title;
+      }
+
+      &::-moz-placeholder{
+        color: $color-text-light;
+        font-size: $font-size-t4;
+        line-height: $line-height-t4;
+        font-family: $font-family-title;
+      }
+
+      &:-moz-placeholder{
+        color: $color-text-light;
+        font-size: $font-size-t4;
+        line-height: $line-height-t4;
+        font-family: $font-family-title;
+      }
+
+      &:-ms-input-placeholder{
+        color: $color-text-light;
+        font-size: $font-size-t4;
+        line-height: $line-height-t4;
+        font-family: $font-family-title;
+      }
+
+      &:focus, &:active{
+        box-shadow:inset 0px 0px 5px 0px #FFFFFF;
+        border: 1px solid #ffffff;
+        outline: none;
+      }
+
+      &:invalid{
+        outline: none;
+      }
+
+      &[data-touched=true]:invalid ~ .form-invalid-icon{
+        opacity: 1.0;
+      }
+    }
+
+    @media screen and (max-width: 760px) {
+      margin-top: 20px;
+    }
+  }
+
+  .contacts__form-title{
+    font-size: $font-size-t4;
+    line-height: $line-height-t4;
+    font-family: $font-family-title;
+    margin-bottom: 20px;
+  }
+}

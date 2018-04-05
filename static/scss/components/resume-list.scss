@@ -1,0 +1,58 @@
+.resume-list{
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  .resume-list_title{
+    font-family: $font-family-title;
+    font-size: $font-size-t5;
+    line-height: $line-height-t5;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color-text-additional;
+    margin-bottom: 40px;
+  }
+
+  .resume-list__block{
+    border-left: 2px solid $color-accent;
+    padding-left: 25px;
+    padding-bottom: 50px;
+
+    p{
+      margin: 0;
+    }
+
+    &:before{
+      width: 12px;
+      height: 12px;
+      border: 2px solid $color-accent;
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+      background-color: #ffffff;
+      left: 10px;
+    }
+
+    &:last-child{
+      padding-bottom: 0;
+    }
+  }
+
+  .resume-list__block-title{
+    text-transform: uppercase;
+    color: $color-accent;
+    font-size: $font-size-t5;
+    line-height: $line-height-t5;
+    font-family: $font-family-title;
+    font-weight: 700;
+    padding-bottom: 5px;
+  }
+
+  .resume-list__block-date{
+    font-family: $font-family-additional;
+    font-size: $font-size-t5;
+    line-height: $line-height-t5;
+    color: $color-text-additional;
+    padding-bottom: 10px;
+  }
+}

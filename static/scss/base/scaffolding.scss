@@ -1,0 +1,99 @@
+html{
+  // IE11 & Edge make the scrollbar overlap the content and automatically hide itself when not in use.
+  -ms-overflow-style: scrollbar;
+  // Changes the default tap highlight to be completely transparent in iOS.
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body{
+  font-family: $font-family-main;
+  font-size: $font-size-t3;
+  font-weight: $font-weight-base;
+  line-height: $line-height-t3;
+  color: $color-text-main;
+}
+
+hr{
+  margin: 0;
+}
+
+ol, ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Links
+a{
+  color: $color-accent;
+  transition: all 0.3s;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:visited{
+    //color: $color-link--visited;
+  }
+
+  &:hover, &:focus, a:active{
+    color: $color-accent;
+    text-decoration: underline;
+  }
+}
+
+nav {
+  font-size: $font-size-t6;
+  line-height: $line-height-t6;
+  font-family: $font-family-title;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 30px;
+
+  ul {
+    li {
+      display: inline-block;
+
+      a {
+        padding-right: 50px;
+        color: $color-text-additional;
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 7px;
+          height: 2px;
+          bottom: 0px;
+          right: 42px;
+          opacity: 0;
+          transition: background 0.3s;
+          background: $color-accent;
+        }
+
+        &:hover {
+          text-decoration: none;
+          transition: all .15s;
+          color: $color-accent;
+        }
+
+        &:hover:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
+// Buttons
+input[type="button"], button{
+  padding: 0;
+  margin: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+

@@ -1,0 +1,26 @@
+.contact-list{
+  font-size: $font-size-t4;
+  line-height: $line-height-t4;
+  font-family: $font-family-title;
+
+  dt{
+    float: left;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  dd{
+    padding-left: 100px;
+    margin-bottom: 15px;
+
+    a{
+      color: $color-text-light;
+    }
+  }
+
+  &.contact-list__opacity-titles{
+    dt{
+      opacity: 0.4;
+    }
+  }
+}

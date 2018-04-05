@@ -1,0 +1,91 @@
+/*------------------------------------
+ #MAIN
+\*------------------------------------*/
+/**
+ * SETTINGS
+ * Variables...............Variables for themes.
+ *
+ * Base
+ * Scaffolding...............Style bare tags.
+ *
+ * COMPONENTS
+ * Article................Post's article styling.
+ * Background..............Background styles.
+ * Blog-header..............Header of blog.html.
+ * Contact-list..............List of contacts styles.
+ * Contacts..............Contact block styles.
+ * Footer..............Copyri styles.
+ * Main-header..............Header of index.html.
+ * Menu..............Menu styles.
+ * Mobile-menu..............Mobile-menu styles.
+ * Personal-profile..............Styles for personal info.
+ * portfolio-menu..............Menu of portfolio block styles.
+ * Portfolio-modal..............Modal with project information from portfolio.
+ * Post-cards..............Card with preview of posts styles.
+ * Posts..............Posts preview in blog.html.
+ * Progress-list..............List with progress-bars styles.
+ * Resume-list..............List  styles.
+ * Section..............Sections styles.
+ * Site-btn..............Buttons styles.
+ * Slider-carousel..............Slider-carousel styles (Bootstrap 4.0).
+ * Style-switcher..............Switcher styles.
+ * Tags..............Tags styles.
+ *
+ * VENDOR
+ * Bootstrap..............Bootstrap 4.0 - framework of styles.
+ * Font-awesome..............Icon font.
+ *
+ */
+
+// Variables
+@import "settings/variables.scss";
+
+// Vendor
+@import "vendor/vendors-extensions.scss";
+@import "vendor/bootstrap/bootstrap.scss";
+@import "vendor/font-awesome/font-awesome.scss";
+
+// Main
+@import "settings/fonts.scss";
+
+@import "tools/mixins.scss";
+
+@import "generic/normalize.scss";
+@import "generic/box-sizing.scss";
+
+@import "base/scaffolding.scss";
+@import "base/type.scss";
+
+@import "objects/media.scss";
+@import "objects/animations.scss";
+
+// Components
+@import "components/personal-profile.scss";
+@import "components/main-header.scss";
+@import "components/contact-list.scss";
+@import "components/section.scss";
+@import "components/site-btn.scss";
+@import "components/menu.scss";
+@import "components/project-card.scss";
+@import "components/resume-list.scss";
+@import "components/post-cards.scss";
+@import "components/background";
+@import "components/contacts.scss";
+@import "components/footer.scss";
+@import "components/progress-list.scss";
+@import "components/portfolio-modal.scss";
+@import "components/tags.scss";
+@import "components/blog-header.scss";
+@import "components/article.scss";
+@import "components/posts.scss";
+@import "components/portfolio-menu.scss";
+@import "components/slider-carousel.scss";
+@import "components/mobile-menu.scss";
+@import "components/style-switcher.scss";
+
+// Obj
+@import "objects/layout.scss";
+
+// Utils
+@import "utilities/helpers.scss";
+@import "utilities/states.scss";

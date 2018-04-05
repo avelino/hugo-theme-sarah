@@ -1,0 +1,19 @@
+.background{
+  background-color: $color-accent;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: $color-text-light;
+
+  &::before{
+    background: $linear-gradient-background;
+    height: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    content: '';
+    z-index: 0;
+  }
+}
