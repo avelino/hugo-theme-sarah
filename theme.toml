@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "Sarah"
+license = "MIT"
+licenselink = "https://github.com/avelino/hugo-theme-sarah/blob/master/LICENSE.md"
+description = "Portfolio and Resume HTML to Developers, Programmers and Freelancers, theme for Hugo."
+homepage = "https://github.com/avelino/hugo-theme-sarah"
+tags = ["clean", "minimal"]
+features = ["responsive", "single page", "resume", "vcard", "portfolio"]
+min_version = 0.15
+
+[author]
+  name = "Avelino"
+  homepage = "http://avelino.xxx/"
+
+# If porting an existing theme
+[original]
+  name = "SpirIT"
+  homepage = "http://previews.aspirity.com/spirit/docs/"
+  repo = ""
