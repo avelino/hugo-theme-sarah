@@ -3,7 +3,7 @@
 
 name = "Sarah"
 license = "MIT"
-licenselink = "https://github.com/avelino/hugo-theme-sarah/blob/master/LICENSE.md"
+licenselink = "https://github.com/avelino/hugo-theme-sarah/blob/master/LICENSE"
 description = "Portfolio and Resume HTML to Developers, Programmers and Freelancers, theme for Hugo."
 homepage = "https://github.com/avelino/hugo-theme-sarah"
 tags = ["clean", "minimal"]
