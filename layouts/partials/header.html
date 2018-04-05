@@ -1,3 +1,4 @@
+{{ $staticHash := now.Unix }}
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 <head>
@@ -19,8 +20,8 @@
   {{ end }}
 
   <!-- CSS -->
-  <link href="/css/main.css" rel="stylesheet">
-  <link href="/css/highlightjs-dracula.css" rel="stylesheet">
+  <link href="/css/main.css?hash={{ $staticHash }}" rel="stylesheet">
+  <link href="/css/highlightjs-dracula.css?hash={{ $staticHash }}" rel="stylesheet">
 
   <!-- CSS - Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet">
