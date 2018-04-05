@@ -1,0 +1,50 @@
+
+{{ partial "header.html" . }}
+
+{{ partial "navigation.html" . }}
+
+<!--Header-->
+<header class="background blog-header"></header>
+<!--Header-->
+
+<!-- Blog -->
+<div class="container">
+  <div class="article">
+    <div class="row">
+      <div class="col-md-12">
+        <a class="article__back-link" href="/"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Back</a>
+
+	<div class="row">
+	  <div class="col-md-12">
+	    <h1 id="blog_header" class="section__title">Latest Posts_</h1>
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="col-md-8 section__resume resume-list">
+
+	    {{ range .Data.Pages.ByPublishDate.Reverse }}
+            {{ if eq .Section "blog" }}
+	    <div class="resume-list__block">
+              <h2 class="resume-list__block-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+              <p class="resume-list__block-date">{{ .Date.Format .Site.Params.dateform }}</p>
+	      {{ if isset .Params "tags" }}
+	      <ul class="tags">
+		{{ range .Params.Tags }}
+		<li><a class="meta" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+		{{ end }}
+	      </ul>
+	      {{ end }}
+	    </div>
+            {{ end }}
+            {{ end }}
+
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Blog -->
+
+{{ partial "footer.html" . }}

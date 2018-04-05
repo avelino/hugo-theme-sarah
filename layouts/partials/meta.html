@@ -1,0 +1,10 @@
+{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+
+{{ if eq $url "" }}
+{{ with .Site.Params.Description }}<meta name="description" content="{{ . }}">{{ end }}
+{{ with .Site.Params.Keywords }}<meta name="keywords" content="{{ range $index, $tag := . }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}">{{ end }}
+<title>{{ .Site.Title }}</title>
+{{ else }}
+{{ with .Params.Tags }}<meta name="keywords" content="{{ range $index, $tag := . }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}">{{ end }}
+<title>{{ .Title }} - {{ .Site.Title }}</title>
+{{ end }}

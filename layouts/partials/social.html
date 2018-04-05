@@ -1,0 +1,9 @@
+{{ if isset .Site.Params "social" }}
+<p class="personal-profile__social">
+  {{ if isset .Site.Params.Social "github" }}<a rel="nofollow" href="https://github.com/{{ .Site.Params.Social.Github }}" target="_blank"><i class="fa fa-github-square"></i></a>{{ end }}
+  {{ if isset .Site.Params.Social "twitter" }}<a rel="nofollow" href="https://twitter.com/{{ .Site.Params.Social.Github }}" target="_blank"><i class="fa fa-twitter-square"></i></a>{{ end }}
+  {{ if isset .Site.Params.Social "facebook" }}<a rel="nofollow" href="https://facebook.com/{{ .Site.Params.Social.Facebook }}" target="_blank"><i class="fa fa-facebook-square"></i></a>{{ end }}
+  {{ if isset .Site.Params.Social "linkedin" }}<a rel="nofollow" href="https://linkedin.com/in/{{ .Site.Params.Social.Linkedin }}" target="_blank"><i class="fa fa-linkedin-square"></i></a>{{ end }}
+  {{ if isset .Site.Params.Social "googleplus" }}<a rel="nofollow" href="https://plus.google.com/+{{ .Site.Params.Social.Googleplus }}" target="_blank"><i class="fa fa-googleplus-square"></i></a>{{ end }}
+</p>
+{{ end }}

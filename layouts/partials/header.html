@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {{ partial "meta.html" . }}
+
+  {{ with .Site.Params.Author }}<meta name="author" content="{{ . }}">{{ end }}
+  <base href="{{ .Site.BaseURL }}">
+
+  {{ .Hugo.Generator }}
+
+  <!-- RSS -->
+  {{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ end }}
+
+  <!-- CSS -->
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="/css/highlightjs-dracula.css" rel="stylesheet">
+
+  <!-- CSS - Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet">
+  <link href="https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  {{ template "_internal/google_analytics_async.html" . }}
+
+  <!-- RSS -->
+  {{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ end }}
+</head>
+
+<body lang="{{ .Site.LanguageCode }}">

@@ -1,0 +1,36 @@
+<!-- Footer -->
+<div class="background">
+  <div id="contact" class="container section">
+    <div class="row contacts">
+      <div class="col-lg-12">
+        <div class="footer">
+
+	  {{ partial "social.html" . }}
+
+	  {{ with .Site.Params.Author }}
+	  <p>written by {{ . }}</p>
+	  {{ end }}
+	  <p><a href="https://github.com/avelino/hugo-theme-sarah" target="_blank">Sarah</a> theme for <a href="http://gohugo.io/" target="_blank">Hugo</a>. © <a href="http://avelino.xxx/" target="_blank">Avelino</a> 2018</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+
+<!-- JS - CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
+
+<!-- JS -->
+<script src="/js/menu.js"></script>
+<script src="/js/progress-list.js"></script>
+<script src="/js/section.js"></script>
+<script src="/js/mobile-menu.js"></script>
+<script src="/js/mbclicker.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

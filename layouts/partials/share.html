@@ -1,0 +1,9 @@
+{{ if isset .Site.Params "social" }}
+<p class="article__share">Share this post:
+  <a rel="nofollow" href="https://twitter.com/intent/tweet?text={{ .Title }} {{ .Permalink }}{{ if isset .Site.Params.Social "twitter" }} by @{{ .Site.Params.Social.Twitter }}{{ end }}" target="_blank"><i class="fa fa-twitter-square"></i></a>
+  <a rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"><i class="fa fa-facebook-square"></i></a>
+  <a rel="nofollow" href="https://www.linkedin.com/cws/share?url={{ .Permalink }}"><i class="fa fa-linkedin-square"></i></a>
+  <a rel="nofollow" href="https://plus.google.com/share?url={{ .Permalink }}"><i class="fa fa-google-plus-square"></i></a>
+  <a rel="nofollow" href="http://pinterest.com/pin/create/button/?url={{ .Permalink }}"><i class="fa fa-pinterest-square"></i></a>
+</p>
+{{ end }}

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row personal-profile">
+    <div class="col-md-4 personal-profile__avatar">
+      <img class="" src="https://pbs.twimg.com/profile_images/977997761370099712/haCxjNW5_400x400.jpg" alt="avatar">
+    </div>
+    <div class="col-md-8">
+      <p class="personal-profile__name">{{ .Site.Params.Author }}_</p>
+      <p class="personal-profile__work">{{ .Site.Params.Keywords }}</p>
+      <div class="personal-profile__contacts">
+        <dl class="contact-list contact-list__opacity-titles">
+	  {{ range $info :=  .Site.Params.Info }}
+	  <dt>{{ index $info "label" }}:</dt>
+	  <dd>
+	    {{ if isset $info "link" }}<a href="{{ index $info "link" }}">{{ end }}
+	    {{ index $info "value" }}
+	    {{ if isset $info "link" }}</a>{{ end }}
+	  </dd>
+	  {{ end }}
+        </dl>
+      </div>
+
+      {{ partial "social.html" . }}
+
+    </div>
+  </div>
+</div>

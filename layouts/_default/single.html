@@ -1,0 +1,32 @@
+
+{{ partial "header.html" . }}
+
+{{ partial "navigation.html" . }}
+
+<!--Header-->
+<header class="background blog-header"></header>
+<!--Header-->
+
+<!--Article-->
+<div class="container">
+  <div class="article">
+    <div class="row">
+      <div class="col-md-12">
+        <a class="article__back-link" href="/"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Back</a>
+
+        <h1 class="article__title">{{ .Title }}</h1>
+        <p class="article_date">
+	  {{ .Date.Format .Site.Params.dateform }} | {{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}
+	</p>
+	{{ partial "share.html" . }}
+
+	{{ .Content }}
+
+	{{ partial "share.html" . }}
+      </div>
+    </div>
+  </div>
+</div>
+<!--Article-->
+
+{{ partial "footer.html" . }}
