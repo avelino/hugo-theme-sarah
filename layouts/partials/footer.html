@@ -27,11 +27,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
 
 <!-- JS -->
-<script src="/js/menu.js?hash={{ $staticHash }}"></script>
-<script src="/js/progress-list.js?hash={{ $staticHash }}"></script>
-<script src="/js/section.js?hash={{ $staticHash }}"></script>
-<script src="/js/mobile-menu.js?hash={{ $staticHash }}"></script>
-<script src="/js/mbclicker.min.js?hash={{ $staticHash }}"></script>
+<script src="{{ .Site.BaseURL }}js/menu.js?hash={{ $staticHash }}"></script>
+<script src="{{ .Site.BaseURL }}js/progress-list.js?hash={{ $staticHash }}"></script>
+<script src="{{ .Site.BaseURL }}js/section.js?hash={{ $staticHash }}"></script>
+<script src="{{ .Site.BaseURL }}js/mobile-menu.js?hash={{ $staticHash }}"></script>
+<script src="{{ .Site.BaseURL }}js/mbclicker.min.js?hash={{ $staticHash }}"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
