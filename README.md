@@ -4,9 +4,23 @@ Sarah theme for [Hugo](https://gohugo.io/) static site generator
 
 ## Screenshots
 
+### Home
+
 ![Screenshot](images/screenshot.png)
+
+### Projects
+
 ![Projects](images/projects.png)
-![Blog](images/blog.png)
+
+### Blog
+
+#### Latest Posts
+
+![Blog - Latest Posts](images/blog.png)
+
+#### Blogpost
+
+![Blog - Blogpost](images/blogpost.png)
 
 ## Installation
 
