@@ -1,0 +1,49 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "Hugo Theme Sarah"
+theme = "hugo-theme-sarah"
+
+[params]
+author = "Avelino"
+keywords = ["hugo-theme-sarah", "Hugo Theme", "Hugo"]
+avatar = "img/black-250.png"
+dateform = "Jan 2, 2006"
+lang = "en"
+footertext = "written by avelino"
+googleAnalytics = ""
+about = """
+hugo-theme-sarah about
+"""
+
+[params.social]
+linkedin      = "avelino0"
+twitter       = "avelino0"
+github        = "avelino"
+
+[[params.info]]
+label = "Address"
+value = "Brazil, São Paulo, SP"
+
+[[params.projects]]
+name = "Vim Bootstrap"
+desc = "A generator which provides a simple method of generating a .vimrc configuration for vim"
+img = "img/vimbootstrap.png"
+link = "https://vim-bootstrap.com/"
+
+[[params.projects]]
+name = "Awesome Go"
+desc = "A curated list of awesome Go frameworks, libraries and software"
+img = "img/awesomego.png"
+link = "https://awesome-go.com/"
+
+[[params.projects]]
+name = "cover.run"
+desc = "A code coverage of any golang package as a service"
+img = "img/coverrun.png"
+link = "https://cover.run/"
+
+[[params.projects]]
+name = "Test After Deploy"
+desc = "YouTube channel on software development (and its ecosystem)"
+img = "img/tad.png"
+link = "https://www.youtube.com/channel/UCZCoLtEGz3MdvxgFhbdZ-QA/featured"
