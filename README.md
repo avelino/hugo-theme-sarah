@@ -64,6 +64,7 @@ For more information read the official [setup guide](https://gohugo.io/getting-s
 #### [[params.info]]
 
 | key | description |
+| --- | --- |
 | label | Label |
 | value | Valeu |
 | link | Hyperlink |
@@ -71,6 +72,7 @@ For more information read the official [setup guide](https://gohugo.io/getting-s
 #### [[params.projects]]
 
 | key | description |
+| --- | --- |
 | name | Project name |
 | desc | Project description |
 | img | Image path (starting `static/`) |
