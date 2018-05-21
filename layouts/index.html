@@ -37,7 +37,7 @@
     {{ range $project := .Site.Params.Projects }}
     <div class="row project-card" data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="web-sites">
       <div class="col-md-6 col-lg-5 project-card__img">
-        <img class="" src="/{{ $project.Img }}" alt="{{ $project.Name }}">
+        <img class="" src="{{ $project.Img | absURL }}" alt="{{ $project.Name }}">
       </div>
       <div class="col-md-6 col-lg-7 project-card__info">
         <h3 class="project-card__title">{{ $project.Name }}</h3>
