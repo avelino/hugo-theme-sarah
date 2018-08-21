@@ -23,7 +23,7 @@
 	<div class="row">
 	  <div class="col-md-8 section__resume resume-list">
 
-	    {{ range .Data.Pages.ByPublishDate.Reverse }}
+	    {{ range $index, $element := $.Paginator.Pages }}
             {{ if eq .Section "blog" }}
 	    <div class="resume-list__block">
               <h2 class="resume-list__block-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
@@ -38,6 +38,7 @@
 	    </div>
             {{ end }}
             {{ end }}
+	    {{ partial "pagination.html" . }}
 
 	  </div>
 	</div>
