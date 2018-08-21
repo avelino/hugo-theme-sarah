@@ -33,5 +33,8 @@
 <script src="{{ .Site.BaseURL }}js/mobile-menu.js?hash={{ $staticHash }}"></script>
 <script src="{{ .Site.BaseURL }}js/mbclicker.min.js?hash={{ $staticHash }}"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+
+<!-- Google Analytics -->
+{{ template "_internal/google_analytics_async.html" . }}
 </body>
 </html>
