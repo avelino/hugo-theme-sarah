@@ -107,6 +107,10 @@ p {
   margin-bottom: 25px;
 }
 
+ul.tags .next {
+  position: absolute;
+  right: 5px;
+}
 
 @media (max-width: 600px) {
   h1, h2, h3, h4, h5, h6 {
