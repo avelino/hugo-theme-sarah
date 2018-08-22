@@ -117,3 +117,14 @@ ul.tags .next {
     margin: 50px 0px 50px 0px;
   }
 }
+
+blockquote {
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-left: .25rem solid #eceeef;
+    p {
+	margin-top: 0;
+	margin-bottom: 0!important;
+    }
+}
