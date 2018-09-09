@@ -16,8 +16,10 @@ hugo-theme-sarah about
 """
 
 [params.social]
-linkedin      = "avelino0"
-twitter       = "avelino0"
+linkedin      = "avelinorun"
+twitter       = "avelinorun"
+instagram     = "avelinorun"
+facebook      = "avelinorun"
 github        = "avelino"
 
 [[params.info]]
