@@ -8,3 +8,6 @@
 {{ with .Params.Tags }}<meta name="keywords" content="{{ range $index, $tag := . }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}">{{ end }}
 <title>{{ .Title }} - {{ .Site.Title }}</title>
 {{ end }}
+{{ if .Params.Tags }}
+<link rel="amphtml" href="https://r.amply.cloud/?url={{ .Permalink }}">
+{{ end }}
