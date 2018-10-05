@@ -2,12 +2,14 @@
 
 {{ if eq $url "" }}
 {{ with .Site.Params.Description }}<meta name="description" content="{{ . }}">{{ end }}
-{{ with .Site.Params.Keywords }}<meta name="keywords" content="{{ range $index, $tag := . }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}">{{ end }}
 <title>{{ .Site.Title }}</title>
 {{ else }}
-{{ with .Params.Tags }}<meta name="keywords" content="{{ range $index, $tag := . }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}">{{ end }}
 <title>{{ .Title }} - {{ .Site.Title }}</title>
 {{ end }}
+
 {{ if .Params.Tags }}
+<meta name="keywords" content="{{ range $index, $tag := .Params.Tags }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}">
 <link rel="amphtml" href="https://r.amply.cloud/?url={{ .Permalink }}">
+{{ else }}
+<meta name="keywords" content="{{ range $index, $tag := .Site.Params.Keywords }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}">
 {{ end }}
