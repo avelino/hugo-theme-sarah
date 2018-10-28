@@ -7,7 +7,9 @@
             <ul>
               <li><a href="#hello">Hello</a></li>
               <li><a href="#projects">Projects</a></li>
-              <li><a href="/blog">blog</a></li>
+	      {{ range .Site.Sections }}
+	      <li><a href="{{ .Permalink }}#content" alt="content {{ .Title }}">{{ .Title }}</a></li>
+	      {{ end }}
             </ul>
           </nav>
         </div>
@@ -31,7 +33,9 @@
         <ul>
           <li><a href="#hello">Hello</a></li>
           <li><a href="#portfolio">Projects</a></li>
-          <li><a href="/blog">blog</a></li>
+	  {{ range .Site.Sections }}
+	  <li><a href="{{ .Permalink }}#content" alt="content {{ .Title }}">{{ .Title }}</a></li>
+	  {{ end }}
         </ul>
       </nav>
     </div>
