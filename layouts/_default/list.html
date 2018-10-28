@@ -16,7 +16,7 @@
 
 	<div class="row">
 	  <div class="col-md-12">
-	    <h1 id="blog_header" class="section__title">Latest Posts_</h1>
+	    <h1 id="blog_header" class="section__title"><a href="{{ .Section | relURL }}" alt="{{ .Section }}">{{ .Section }}</a>: Latest Posts_</h1>
 	  </div>
 	</div>
 
@@ -24,7 +24,6 @@
 	  <div class="col-md-8 section__resume resume-list">
 
 	    {{ range $index, $element := $.Paginator.Pages }}
-            {{ if eq .Section "blog" }}
 	    <div class="resume-list__block">
               <h2 class="resume-list__block-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
               <p class="resume-list__block-date">{{ .Date.Format .Site.Params.dateform }}</p>
@@ -36,7 +35,6 @@
 	      </ul>
 	      {{ end }}
 	    </div>
-            {{ end }}
             {{ end }}
 	    {{ partial "pagination.html" . }}
 
