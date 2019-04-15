@@ -1,17 +1,20 @@
 {
-  "name": "hugo-theme-sarah",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-cssnano": "^2.1.3",
-    "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-sass": "^3.2.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-watch": "^5.0.1",
-    "hoek": "^5.0.3",
-    "run-sequence": "^2.2.1"
-  }
+    "name": "hugo-theme-sarah",
+    "version": "0.1.1",
+    "private": true,
+    "dependencies": {
+	"gulp-autoprefixer": "^4.1.0",
+	"gulp-cssnano": "^2.1.3",
+	"gulp-notify": "^3.2.0",
+	"gulp-plumber": "^1.2.0",
+	"gulp-sass": "^3.2.1",
+	"gulp-sourcemaps": "^2.6.4",
+	"gulp-watch": "^5.0.1",
+	"hoek": "^5.0.3",
+	"run-sequence": "^2.2.1"
+    },
+    "devDependencies": {
+	"gulp": ">=3.9.1 <4.0.0",
+	"node.extend": ">=2.0.1"
+    }
 }
