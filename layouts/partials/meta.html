@@ -1,16 +1,25 @@
-{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-
-{{ if eq $url "" }}
-{{ with .Site.Params.Description }}<meta name="description" content="{{ . }}">{{ end }}
-{{ end }}
 {{ if .Title }}
 <title>{{ .Title }} - {{ .Site.Title }}</title>
 {{ else }}
 <title>{{ .Site.Title }}</title>
 {{ end }}
+
 {{ if .Params.Tags }}
 <meta name="keywords" content="{{ range $index, $tag := .Params.Tags }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}">
-<link rel="amphtml" href="https://r.amply.cloud/?url={{ .Permalink }}">
 {{ else }}
 <meta name="keywords" content="{{ range $index, $tag := .Site.Params.Keywords }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}">
+{{ end }}
+
+{{ if .IsPage }}
+
+{{ if .Description }}
+<meta name="description" content="{{ .Description }}">
+{{ else }}
+<meta name="description" content="{{ .Summary }}">
+{{ end }}
+
+<link rel="amphtml" href="https://r.amply.cloud/?url={{ .Permalink }}">
+
+{{ else }}
+<meta name="description" content="{{ .Site.Params.Description }}">
 {{ end }}
