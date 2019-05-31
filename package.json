@@ -15,6 +15,7 @@
     },
     "devDependencies": {
 	"gulp": ">=3.9.1 <4.0.0",
+	"lodash": ">=4.17.11",
 	"node.extend": ">=2.0.1"
     }
 }
