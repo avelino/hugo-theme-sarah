@@ -72,6 +72,8 @@ For more information read the official [setup guide](https://gohugo.io/getting-s
 
 #### [[params.projects]]
 
+If not set this config, layout read by `content/projects/<FILE-NAME>.md`, ex: https://github.com/avelino/avelino.run/tree/master/content/projects
+
 | key | description |
 | --- | --- |
 | name | Project name |
