@@ -49,6 +49,7 @@ For more information read the official [setup guide](https://gohugo.io/getting-s
 | lang | Language that the main content will be written |
 | footertext | Text at the end of the page (All rights reserved) |
 | googleAnalytics | Google Analytics ID |
+| aboutFile | Set markdow file, show on homepage |
 | about | Author text, show on homepage |
 
 #### [params.social]
@@ -100,6 +101,7 @@ dateform = "Jan 2, 2006"
 lang = "en"
 footertext = "written by avelino"
 googleAnalytics = "UA-3063031-15"
+aboutFile = "about.md"
 about = """
 I’m a currently a Chief Technology Officer (and founder) at [Nuveo](https://nuveo.ai/) (**Artificial Intelligence** within reach) and mathematician formed at [IME-USP](https://www.ime.usp.br/).
 
