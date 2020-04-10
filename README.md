@@ -34,6 +34,14 @@ git clone https://github.com/avelino/hugo-theme-sarah.git
 
 For more information read the official [setup guide](https://gohugo.io/getting-started/installing/) of Hugo.
 
+## shortcodes
+| name | example |
+| --- | --- |
+| [Speaker Deck](https://speakerdeck.com/) | `{{< speakerdeck 9951aee0382e0132d1604297f98471b0 >}}` |
+| [Slide Share](https://www.slideshare.net/) | `{{< slideshare 2DLd4OvBUeGT2M  >}}` |
+| [scribd](https://scribd.com) | `{{< scribd 439578708 >}}` |
+| [Google Maps](https://maps.google.com/) | `{{< googlemaps 1vmr0dHs0fWQ0Q6w_va_G2BYbcCfFsprM >}}` |
+
 ## config.toml
 
 ### Nodes
