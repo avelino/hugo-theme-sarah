@@ -134,6 +134,8 @@ link = "https://awesome-go.com/"
 
 ## Contribute
 
+- node version 10 `nvm use $(cat .node-version)`
+
 ### Build SCSS
 
 ```bash
