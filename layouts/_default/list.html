@@ -17,6 +17,13 @@
 					<div class="col-md-12">
 						<h1 id="blog_header" class="section__title"><a href="{{ .Section | relURL }}"
 								alt="{{ .Section }}">{{ .Section }}</a>: Latest Posts_</h1>
+						<p id="description">
+							{{if isset $.Site.Data.contents "descriptions"}}
+							{{if isset $.Site.Data.contents.descriptions .Section}}
+							{{index $.Site.Data.contents.descriptions .Section}}
+							{{end}}
+							{{end}}
+						</p>
 					</div>
 				</div>
 
