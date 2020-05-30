@@ -1,10 +1,7 @@
 <!--Main menu-->
 {{define "nav"}}
-{{ range $section, $taxonomy := .Site.Sections }}
-{{ $title :=  replace $section "-" " " }}
-{{ if $title }}
-<li><a href="/{{ $section }}/#content" alt="content {{ $title }}">{{ $title }}</a></li>
-{{ end }}
+{{ range .Site.Sections }}
+<li><a href="{{ .Permalink }}#content" alt="content {{ .Title }}">{{ .Title }}</a></li>
 {{ end }}
 {{end}}
 <div class="menu">
