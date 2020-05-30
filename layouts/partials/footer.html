@@ -30,6 +30,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
 
 <!-- JS -->
+<link rel="preload" href="{{ .Site.BaseURL }}js/menu.js?hash={{ now.Unix }}" as="script">
+<link rel="preload" href="{{ .Site.BaseURL }}js/progress-list.js?hash={{ now.Unix }}" as="script">
+<link rel="preload" href="{{ .Site.BaseURL }}js/section.js?hash={{ now.Unix }}" as="script">
+<link rel="preload" href="{{ .Site.BaseURL }}js/mobile-menu.js?hash={{ now.Unix }}" as="script">
+<link rel="preload" href="{{ .Site.BaseURL }}js/mbclicker.min.js?hash={{ now.Unix }}" as="script">
+
 <script src="{{ .Site.BaseURL }}js/menu.js?hash={{ now.Unix }}"></script>
 <script src="{{ .Site.BaseURL }}js/progress-list.js?hash={{ now.Unix }}"></script>
 <script src="{{ .Site.BaseURL }}js/section.js?hash={{ now.Unix }}"></script>

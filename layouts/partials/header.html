@@ -22,8 +22,10 @@
     title="{{ .Site.Title | safeHTML }}" />
 
   <!-- CSS -->
+  <link href="{{ .Site.BaseURL }}css/main.min.css?hash={{ now.Unix }}" rel="preload" as="style">
   <link href="{{ .Site.BaseURL }}css/main.min.css?hash={{ now.Unix }}" rel="stylesheet" media="print"
     onload="this.media='all'">
+  <link href="{{ .Site.BaseURL }}css/highlightjs-dracula.css?hash={{ now.Unix }}" rel="preload" as="style">
   <link href="{{ .Site.BaseURL }}css/highlightjs-dracula.css?hash={{ now.Unix }}" rel="stylesheet" media="print"
     onload="this.media='all'">
   <!-- CSS - Fonts -->
