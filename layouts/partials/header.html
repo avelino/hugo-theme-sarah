@@ -1,6 +1,6 @@
-{{ $staticHash := now.Unix }}
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +8,22 @@
 
   {{ partial "meta.html" . }}
 
-  {{ with .Site.Params.Author }}<meta name="author" content="{{ . }}">{{ end }}
+  {{ if .Site.Params.Author }}
+  {{ with .Site.Params.Author }}
+  <meta name="author" content="{{ . }}">{{ end }}
+  {{ end }}
   <base href="{{ .Site.BaseURL }}">
   <link rel="canonical" href="{{ .Permalink }}">
 
-  {{ hugo.Generator }}
+  {{ .Hugo.Generator }}
 
   <!-- RSS -->
-  {{ with .OutputFormats.Get "rss" }}
-  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-  {{ end }}
+  <link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}index.xml"
+    title="{{ .Site.Title | safeHTML }}" />
 
   <!-- CSS -->
-  <link href="{{ .Site.BaseURL }}css/main.min.css?hash={{ $staticHash }}" rel="stylesheet">
-  <link href="{{ .Site.BaseURL }}css/highlightjs-dracula.css?hash={{ $staticHash }}" rel="stylesheet">
+  <link href="{{ .Site.BaseURL }}css/main.min.css?hash={{ .Now.Unix }}" rel="stylesheet">
+  <link href="{{ .Site.BaseURL }}css/highlightjs-dracula.css?hash={{ .Now.Unix }}" rel="stylesheet">
 
   <!-- CSS - Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet">
