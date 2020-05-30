@@ -22,11 +22,13 @@
     title="{{ .Site.Title | safeHTML }}" />
 
   <!-- CSS -->
-  <link href="{{ .Site.BaseURL }}css/main.min.css?hash={{ .Now.Unix }}" rel="stylesheet">
-  <link href="{{ .Site.BaseURL }}css/highlightjs-dracula.css?hash={{ .Now.Unix }}" rel="stylesheet">
-
+  <link href="{{ .Site.BaseURL }}css/main.min.css?hash={{ .Now.Unix }}" rel="stylesheet" media="print"
+    onload="this.media='all'">
+  <link href="{{ .Site.BaseURL }}css/highlightjs-dracula.css?hash={{ .Now.Unix }}" rel="stylesheet" media="print"
+    onload="this.media='all'">
   <!-- CSS - Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet" media="print"
+    onload="this.media='all'">
 </head>
 
 <body lang="{{ .Site.LanguageCode }}">
