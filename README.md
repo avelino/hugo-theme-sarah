@@ -1,26 +1,8 @@
 # hugo-theme-sarah
 
-Sarah theme for [Hugo](https://gohugo.io/) static site generator
+**Sarah** theme for [Hugo](https://gohugo.io/) static site generator.
 
-## Screenshots
-
-### Home
-
-![Screenshot](images/screenshot.png)
-
-### Projects
-
-![Projects](images/projects.png)
-
-### Blog
-
-#### Latest Posts
-
-![Blog - Latest Posts](images/blog.png)
-
-#### Blogpost
-
-![Blog - Blogpost](images/blogpost.png)
+> **Why Sarah?** It is a possible name when I have a child (girl)
 
 ## Installation
 
@@ -34,13 +16,16 @@ git clone https://github.com/avelino/hugo-theme-sarah.git
 
 For more information read the official [setup guide](https://gohugo.io/getting-started/installing/) of Hugo.
 
-## shortcodes
-| name | example |
-| --- | --- |
-| [Speaker Deck](https://speakerdeck.com/) | `{{< speakerdeck 9951aee0382e0132d1604297f98471b0 >}}` |
-| [Slide Share](https://www.slideshare.net/) | `{{< slideshare 2DLd4OvBUeGT2M  >}}` |
-| [scribd](https://scribd.com) | `{{< scribd 439578708 >}}` |
-| [Google Maps](https://maps.google.com/) | `{{< googlemaps 1vmr0dHs0fWQ0Q6w_va_G2BYbcCfFsprM >}}` |
+## Contribute
+
+Node version 10 `nvm use $(cat .node-version)`
+
+### Build SCSS
+
+```bash
+npm i
+gulp build
+```
 
 ## config.toml
 
@@ -48,46 +33,46 @@ For more information read the official [setup guide](https://gohugo.io/getting-s
 
 #### [params]
 
-| key | description |
-| --- | --- |
-| author | Author name |
-| keywords | Keywords list |
-| avatar | Author picture |
-| dateform | Date format ([read more](https://discourse.gohugo.io/t/date-time-format-in-config-toml/5268/2)) |
-| lang | Language that the main content will be written |
-| footertext | Text at the end of the page (All rights reserved) |
-| googleAnalytics | Google Analytics ID |
-| aboutFile | Set markdow file, show on homepage |
-| about | Author text, show on homepage |
+| key             | description                                                                                     |
+| --------------- | ----------------------------------------------------------------------------------------------- |
+| author          | Author name                                                                                     |
+| keywords        | Keywords list                                                                                   |
+| avatar          | Author picture                                                                                  |
+| dateform        | Date format ([read more](https://discourse.gohugo.io/t/date-time-format-in-config-toml/5268/2)) |
+| lang            | Language that the main content will be written                                                  |
+| footertext      | Text at the end of the page (All rights reserved)                                               |
+| googleAnalytics | Google Analytics ID                                                                             |
+| aboutFile       | Set markdow file, show on homepage                                                              |
+| about           | Author text, show on homepage                                                                   |
 
 #### [params.social]
 
-| key | description |
-| --- | --- |
-| linkedin | Account name |
-| twitter | Account name |
-| github | Account name |
+| key        | description  |
+| ---------- | ------------ |
+| linkedin   | Account name |
+| twitter    | Account name |
+| github     | Account name |
 | googleplus | Account name |
-| facebook | Account name |
+| facebook   | Account name |
 
 #### [[params.info]]
 
-| key | description |
-| --- | --- |
-| label | Label |
-| value | Valeu |
-| link | Hyperlink |
+| key   | description |
+| ----- | ----------- |
+| label | Label       |
+| value | Valeu       |
+| link  | Hyperlink   |
 
 #### [[params.projects]]
 
 If not set this config, layout read by `content/projects/<FILE-NAME>.md`, ex: https://github.com/avelino/avelino.run/tree/master/content/projects
 
-| key | description |
-| --- | --- |
-| name | Project name |
-| desc | Project description |
-| img | Image path (starting `static/`) |
-| link | Hyperlink |
+| key  | description                     |
+| ---- | ------------------------------- |
+| name | Project name                    |
+| desc | Project description             |
+| img  | Image path (starting `static/`) |
+| link | Hyperlink                       |
 
 ### Example
 
@@ -140,13 +125,31 @@ img = "img/awesomego.png"
 link = "https://awesome-go.com/"
 ```
 
-## Contribute
+## shortcodes
+| name                                       | example                                                |
+| ------------------------------------------ | ------------------------------------------------------ |
+| [Speaker Deck](https://speakerdeck.com/)   | `{{< speakerdeck 9951aee0382e0132d1604297f98471b0 >}}` |
+| [Slide Share](https://www.slideshare.net/) | `{{< slideshare 2DLd4OvBUeGT2M  >}}`                   |
+| [scribd](https://scribd.com)               | `{{< scribd 439578708 >}}`                             |
+| [Google Maps](https://maps.google.com/)    | `{{< googlemaps 1vmr0dHs0fWQ0Q6w_va_G2BYbcCfFsprM >}}` |
 
-- node version 10 `nvm use $(cat .node-version)`
 
-### Build SCSS
+## Screenshots
 
-```bash
-npm install .
-gulp build
-```
+### Home
+
+![Screenshot](images/screenshot.png)
+
+### Projects
+
+![Projects](images/projects.png)
+
+### Blog
+
+#### Latest Posts
+
+![Blog - Latest Posts](images/blog.png)
+
+#### Blogpost
+
+![Blog - Blogpost](images/blogpost.png)
