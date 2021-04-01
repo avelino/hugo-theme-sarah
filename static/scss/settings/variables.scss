@@ -1,6 +1,14 @@
-$font-family-main: 'Roboto', sans-serif;
-$font-family-title: 'Roboto Mono', monospace;
-$font-family-additional: 'Inconsolata', monospace;
+$font-family-main: "PT Sans Caption",
+sans-serif;
+$font-family-title: SFMono-Regular,
+Menlo,
+Monaco,
+Consolas,
+"Liberation Mono",
+"Courier New",
+monospace;
+$font-family-additional: 'Inconsolata',
+monospace;
 
 $font-size-t1: 44px;
 $font-size-t2: 36px;
@@ -23,8 +31,8 @@ $color-text-additional: #999999;
 $color-text-light: #ffffff;
 $color-accent: #6d56c1;
 $color-accent-additional: #7b67c7;
-$box-shadow-btn: 0px 1px 29px rgba(0,0,0,0.16);
-$linear-gradient-background: linear-gradient(54deg, rgba(74,76,179,0.95) 34%,rgba(207,157,157,0.95) 100%);
+$box-shadow-btn: 0px 1px 29px rgba(0, 0, 0, 0.16);
+$linear-gradient-background: linear-gradient(54deg, rgba(74, 76, 179, 0.95) 34%, rgba(207, 157, 157, 0.95) 100%);
 
 //variables for monochrome.css (uncomment if you want change style)
 
