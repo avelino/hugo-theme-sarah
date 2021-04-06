@@ -1,5 +1,9 @@
 {{ if .Title }}
+{{ if ne .Title .Site.Title}}
 <title>{{ .Title }} - {{ .Site.Title }}</title>
+{{ else }}
+<title>{{ if .Site.Params.Description }}{{ .Site.Params.Description }} - {{ end }}{{ .Site.Title }}</title>
+{{ end }}
 {{ else }}
 <title>{{ if .Site.Params.Description }}{{ .Site.Params.Description }} - {{ end }}{{ .Site.Title }}</title>
 {{ end }}
