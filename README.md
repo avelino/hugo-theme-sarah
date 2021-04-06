@@ -33,17 +33,18 @@ gulp build
 
 #### [params]
 
-| key             | description                                                                                     |
-| --------------- | ----------------------------------------------------------------------------------------------- |
-| author          | Author name                                                                                     |
-| keywords        | Keywords list                                                                                   |
-| avatar          | Author picture                                                                                  |
-| dateform        | Date format ([read more](https://discourse.gohugo.io/t/date-time-format-in-config-toml/5268/2)) |
-| lang            | Language that the main content will be written                                                  |
-| footertext      | Text at the end of the page (All rights reserved)                                               |
-| googleAnalytics | Google Analytics ID                                                                             |
-| aboutFile       | Set markdow file, show on homepage                                                              |
-| about           | Author text, show on homepage                                                                   |
+| key             | description                                                                                               |
+| --------------- | --------------------------------------------------------------------------------------------------------- |
+| author          | Author name                                                                                               |
+| keywords        | Keywords list                                                                                             |
+| description     | Site description with up to 160 characters, used on the initial page for indexing in search engines (SEO) |
+| avatar          | Author picture                                                                                            |
+| dateform        | Date format ([read more](https://discourse.gohugo.io/t/date-time-format-in-config-toml/5268/2))           |
+| lang            | Language that the main content will be written                                                            |
+| footertext      | Text at the end of the page (All rights reserved)                                                         |
+| googleAnalytics | Google Analytics ID                                                                                       |
+| aboutFile       | Set markdow file, show on homepage                                                                        |
+| about           | Author text, show on homepage                                                                             |
 
 #### [params.social]
 
@@ -65,7 +66,7 @@ gulp build
 
 #### [[params.projects]]
 
-If not set this config, layout read by `content/projects/<FILE-NAME>.md`, ex: https://github.com/avelino/avelino.run/tree/master/content/projects
+If not set this config, layout read by `content/projects/<FILE-NAME>.md`, ex: <https://github.com/avelino/avelino.run/tree/master/content/projects>
 
 | key  | description                     |
 | ---- | ------------------------------- |
@@ -91,6 +92,7 @@ blog  = ":slug"
 [params]
 author = "Avelino"
 keywords = ["Golang (Gopher)", "Neural Network", "Artificial Intelligence"]
+description = "I use open source to help people evolve, I take pleasure in seeing people evolve"
 avatar = "img/black-250.png"
 dateform = "Jan 2, 2006"
 lang = "en"
@@ -126,13 +128,13 @@ link = "https://awesome-go.com/"
 ```
 
 ## shortcodes
+
 | name                                       | example                                                |
 | ------------------------------------------ | ------------------------------------------------------ |
 | [Speaker Deck](https://speakerdeck.com/)   | `{{< speakerdeck 9951aee0382e0132d1604297f98471b0 >}}` |
 | [Slide Share](https://www.slideshare.net/) | `{{< slideshare 2DLd4OvBUeGT2M  >}}`                   |
 | [scribd](https://scribd.com)               | `{{< scribd 439578708 >}}`                             |
 | [Google Maps](https://maps.google.com/)    | `{{< googlemaps 1vmr0dHs0fWQ0Q6w_va_G2BYbcCfFsprM >}}` |
-
 
 ## Screenshots
 
