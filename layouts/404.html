@@ -1,7 +1,4 @@
-
-{{ partial "header.html" . }}
-
-{{ partial "navigation.html" . }}
+{{ partial "header.html" . }} {{ partial "navigation.html" . }}
 
 <!--Header-->
 <header class="background blog-header"></header>
@@ -9,16 +6,16 @@
 
 <!--Article-->
 <div class="container">
-  <div class="article">
-    <div class="row">
-      <div class="col-md-12">
-        <a class="article__back-link" href="/"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Back</a>
+    <div class="article">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="article__back-link" href="/"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Back</a>
 
-        <h1 class="article__title">Oops, page not found!</h1>
-	<img src="{{ "/img/404bath.gif" | absURL }}" alt="404, page not found!" />
-      </div>
+                <h1 class="article__title">Oops, page not found!</h1>
+                <img src="{{ " /img/404bath.gif " | absURL }}" alt="404, page not found!" />
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 <!--Article-->
 

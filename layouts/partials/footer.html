@@ -1,31 +1,28 @@
 <!-- Footer -->
 <div class="background">
-  <div id="contact" class="container section">
-    <div class="row contacts">
-      <div class="col-lg-12">
-        <div class="footer">
+    <div id="contact" class="container section">
+        <div class="row contacts">
+            <div class="col-lg-12">
+                <div class="footer">
 
-          {{ partial "social.html" . }}
-
-          {{ with .Site.Params.Author }}
-          <p>written by {{ . }}</p>
-          {{ end }}
-          <p><a href="https://github.com/avelino/hugo-theme-sarah" target="_blank">Sarah</a> theme for <a
-              href="http://gohugo.io/" target="_blank">Hugo</a>. © <a href="http://avelino.xxx/"
-              target="_blank">Avelino</a> 2018</p>
+                    {{ partial "social.html" . }} {{ with .Site.Params.Author }}
+                    <p>written by {{ . }}</p>
+                    {{ end }}
+                    <p>
+                        <a href="https://github.com/avelino/hugo-theme-sarah" target="_blank" alt="Sarah theme Github repository">Sarah</a> theme for <a href="http://gohugo.io/" alt="Hugo CMS" target="_blank">Hugo</a>, made with ♥ by <a href="http://avelino.run/"
+                            alt="Avelino personal site" target="_blank">Avelino</a>
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 <!-- Footer -->
 
 <!-- JS - CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
-  integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha256-jDnOKIOq2KNsQZTcBTEnsp76FnfMEttF6AV2DF2fFNE=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/go.min.js"></script>
 
@@ -41,7 +38,9 @@
 <script src="{{ .Site.BaseURL }}js/section.js?hash={{ now.Unix }}"></script>
 <script src="{{ .Site.BaseURL }}js/mobile-menu.js?hash={{ now.Unix }}"></script>
 <script src="{{ .Site.BaseURL }}js/mbclicker.min.js?hash={{ now.Unix }}"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
 
 <!-- Google Analytics -->
 {{ template "_internal/google_analytics_async.html" . }}
