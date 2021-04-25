@@ -1,0 +1,22 @@
+name: Grunt build and commit updated stylesheets (main/master branch)
+
+on: [push, pull_request]
+
+jobs:
+  grunt-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 15
+
+      - name: Compile with Grunt
+        uses: elstudio/actions-js-build/build@v4
+
+      - name: Commit changes
+        if: github.ref == 'refs/heads/master'
+        uses: elstudio/actions-js-build/commit@v4
+        with:
+          commitMessage: Regenerate css sass/minify
