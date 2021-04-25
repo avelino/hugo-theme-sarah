@@ -19,7 +19,6 @@
 </section>
 <!--Hello-->
 
-{{ if .Site.Params.Projects }}
 <hr>
 <!--Projects-->
 <section id="projects" class="container section">
@@ -30,7 +29,7 @@
     </div>
 
     <div class="portfolio-cards">
-        {{ range $project := .Site.Params.Projects }}
+        {{ if .Site.Params.Projects }} {{ range $project := .Site.Params.Projects }}
         <div class="row project-card" data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="web-sites">
             {{ if $project.img }}
             <div class="col-md-6 col-lg-5 project-card__img">
@@ -58,11 +57,10 @@
                     }}</a>
             </div>
         </div>
-        {{ end }} {{ end }}
+        {{ end }} {{ end }}{{ end }}
     </div>
 </section>
 <!--Projects-->
-{{ end }}
 
 <hr />
 
