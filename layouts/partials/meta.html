@@ -1,31 +1,12 @@
-{{ if .Title }}
-{{ if ne .Title .Site.Title}}
+{{ if .Title }} {{ if ne .Title .Site.Title}}
 <title>{{ .Title }} - {{ .Site.Title }}</title>
 {{ else }}
 <title>{{ if .Site.Params.Description }}{{ .Site.Params.Description }} - {{ end }}{{ .Site.Title }}</title>
-{{ end }}
-{{ else }}
+{{ end }} {{ else }}
 <title>{{ if .Site.Params.Description }}{{ .Site.Params.Description }} - {{ end }}{{ .Site.Title }}</title>
-{{ end }}
-
-{{ if .Params.Tags }}
-<meta name="keywords" content="{{ range $index, $tag := .Params.Tags }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}">
-{{ else }}
-{{ if .Site.Params.Keywords }}
-<meta name="keywords"
-    content="{{ range $index, $tag := .Site.Params.Keywords }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}">
-{{end}}
-{{ end }}
-
-{{ if .IsPage }}
-{{ if .Description }}
-<meta name="description" content="{{ .Description }}">
-{{ else }}
-<meta name="description" content="{{ .Summary }}">
-{{ end }}
-{{ else }}
-<meta name="description" content="{{ .Site.Params.Description }}">
-{{ end }}
-
-{{ template "_internal/opengraph.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
+{{ end }} {{ if .Params.Tags }}
+<meta name="keywords" content="{{ range $index, $tag := .Params.Tags }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}"> {{ else }} {{ if .Site.Params.Keywords }}
+<meta name="keywords" content="{{ range $index, $tag := .Site.Params.Keywords }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}"> {{end}} {{ end }} {{ if .IsPage }} {{ if .Description }}
+<meta name="description" content="{{ .Description }}"> {{ else }}
+<meta name="description" content="{{ .Summary }}"> {{ end }} {{ else }}
+<meta name="description" content="{{ .Site.Params.Description }}"> {{ end }} {{ template "_internal/opengraph.html" . }} {{ template "_internal/twitter_cards.html" . }} {{ template "_internal/google_news.html" . }}
