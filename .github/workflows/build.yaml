@@ -11,12 +11,5 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 15
-
-      - name: Compile with Grunt
-        uses: elstudio/actions-js-build/build@v4
-
-      - name: Commit changes
-        if: github.ref == 'refs/heads/master'
-        uses: elstudio/actions-js-build/commit@v4
-        with:
-          commitMessage: Regenerate css sass/minify
+      - run: npm ci
+      - run: gulp build
