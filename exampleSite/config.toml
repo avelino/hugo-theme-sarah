@@ -1,51 +1,34 @@
-baseURL = "https://example.org/"
-languageCode = "en-us"
-title = "Hugo Theme Sarah"
-theme = "hugo-theme-sarah"
+baseurl = "https://example.org"
+languageCode = "en-US"
+title = "Sarah theme demo"
+theme = "sarah"
+googleAnalytics = ""
+disqusShortname = ""
 
 [params]
-author = "Avelino"
+author = "Sarah Theme"
 keywords = ["hugo-theme-sarah", "Hugo Theme", "Hugo"]
-avatar = "img/black-250.png"
+description = "Sarah theme for Hugo static site generator"
+avatar = "https://github.com/avelino/hugo-theme-sarah/raw/master/images/projects.png"
 dateform = "Jan 2, 2006"
 lang = "en"
 footertext = "written by avelino"
-googleAnalytics = ""
 about = """
 hugo-theme-sarah about
 """
 
 [params.social]
-linkedin      = "avelinorun"
-twitter       = "avelinorun"
 instagram     = "avelinorun"
-facebook      = "avelinorun"
 github        = "avelino"
+twitter       = "avelinorun"
+linkedin      = "avelinorun"
 
 [[params.info]]
 label = "Address"
-value = "Brazil, São Paulo, SP"
+value = "github.com/avelino/hugo-theme-sarah"
 
 [[params.projects]]
-name = "Vim Bootstrap"
-desc = "A generator which provides a simple method of generating a .vimrc configuration for vim"
-img = "img/vimbootstrap.png"
-link = "https://vim-bootstrap.com/"
-
-[[params.projects]]
-name = "Awesome Go"
-desc = "A curated list of awesome Go frameworks, libraries and software"
-img = "img/awesomego.png"
-link = "https://awesome-go.com/"
-
-[[params.projects]]
-name = "cover.run"
-desc = "A code coverage of any golang package as a service"
-img = "img/coverrun.png"
-link = "https://cover.run/"
-
-[[params.projects]]
-name = "Test After Deploy"
-desc = "YouTube channel on software development (and its ecosystem)"
-img = "img/tad.png"
-link = "https://www.youtube.com/channel/UCZCoLtEGz3MdvxgFhbdZ-QA/featured"
+name = "Sarah Theme"
+desc = "Sarah theme for Hugo static site generator"
+img = "https://github.com/avelino/hugo-theme-sarah/raw/master/images/screenshot.png"
+link = "https://github.com/avelino/hugo-theme-sarah"
