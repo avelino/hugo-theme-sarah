@@ -1,27 +1,27 @@
 <div class="container">
-  <div class="row personal-profile">
-    <div class="col-md-4 personal-profile__avatar">
-      <img class="" src="{{ .Site.Params.Avatar | absURL }}" alt="{{ .Site.Params.Author }} - avatar" />
-    </div>
-    <div class="col-md-8">
-      <p class="personal-profile__name">{{ .Site.Params.Author }}_</p>
-      <p class="personal-profile__work">{{ range $index, $key := .Site.Params.Keywords }}{{ if $index }}, {{ end }}{{ $key }}{{ end }}
-      </p>
-      <div class="personal-profile__contacts">
-        <dl class="contact-list contact-list__opacity-titles">
-	  {{ range $info := .Site.Params.Info }}
-	  <dt>{{ index $info "label" }}:</dt>
-	  <dd>
-	    {{ if isset $info "link" }}<a href="{{ index $info "link" }}">{{ end }}
-	    {{ index $info "value" }}
-	    {{ if isset $info "link" }}</a>{{ end }}
-	  </dd>
-	  {{ end }}
-        </dl>
-      </div>
+    <div class="row personal-profile">
+        <div class="col-md-4 personal-profile__avatar">
+            <img class="" src="{{ .Site.Params.Avatar | absURL }}" alt="{{ .Site.Params.Author }} - avatar" />
+        </div>
+        <div class="col-md-8">
+            <p class="personal-profile__name">{{ .Site.Params.Author }}_</p>
+            <p class="personal-profile__work">{{ range $index, $key := .Site.Params.Keywords }}{{ if $index }}, {{ end }}{{ $key }}{{ end }}
+            </p>
+            <div class="personal-profile__contacts">
+                <dl class="contact-list contact-list__opacity-titles">
+                    {{ range $info := .Site.Params.Info }}
+                    <dt>{{ index $info "label" }}:</dt>
+                    <dd>
+                        {{ if isset $info "link" }}<a href="{{ index $info " link " }}">{{ end }}
+              {{ index $info "value" }}
+              {{ if isset $info "link" }}</a>{{ end }}
+                    </dd>
+                    {{ end }}
+                </dl>
+            </div>
 
-      {{ partial "social.html" . }}
+            {{ partial "social.html" . }}
 
+        </div>
     </div>
-  </div>
 </div>

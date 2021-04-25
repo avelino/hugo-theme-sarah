@@ -1,6 +1,4 @@
-{{ partial "header.html" . }}
-
-{{ partial "navigation.html" . }}
+{{ partial "header.html" . }} {{ partial "navigation.html" . }}
 
 <!--Header-->
 <header class="background blog-header"></header>
@@ -8,48 +6,42 @@
 
 <!-- Blog -->
 <div class="container">
-	<div class="article">
-		<div class="row">
-			<div class="col-md-12">
-				<a class="article__back-link" href="/"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Back</a>
+    <div class="article">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="article__back-link" href="/"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Back</a>
 
-				<div class="row">
-					<div class="col-md-12">
-						<h1 id="blog_header" class="section__title"><a href="{{ .Section | relURL }}"
-								alt="{{ .Section }}">{{ .Section }}</a>: Latest Posts_</h1>
-						<p id="description">
-							{{if isset $.Site.Data.contents "descriptions"}}
-							{{if isset $.Site.Data.contents.descriptions .Section}}
-							{{index $.Site.Data.contents.descriptions .Section}}
-							{{end}}
-							{{end}}
-						</p>
-					</div>
-				</div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 id="blog_header" class="section__title"><a href="{{ .Section | relURL }}" alt="{{ .Section }}">{{ .Section }}</a>: Latest Posts_</h1>
+                        <p id="description">
+                            {{if isset $.Site.Data.contents "descriptions"}} {{if isset $.Site.Data.contents.descriptions .Section}} {{index $.Site.Data.contents.descriptions .Section}} {{end}} {{end}}
+                        </p>
+                    </div>
+                </div>
 
-				<div class="row">
-					<div class="col-md-8 section__resume resume-list">
+                <div class="row">
+                    <div class="col-md-8 section__resume resume-list">
 
-						{{ range $index, $element := $.Paginator.Pages }}
-						<div class="resume-list__block">
-							<h2 class="resume-list__block-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-							<p class="resume-list__block-date">{{ .Date.Format .Site.Params.dateform }}</p>
-							{{ if isset .Params "tags" }}
-							<ul class="tags">
-								{{ range .Params.Tags }}
-								<li><a class="meta" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
-								{{ end }}
-							</ul>
-							{{ end }}
-						</div>
-						{{ end }}
-						{{ partial "pagination.html" . }}
+                        {{ range $index, $element := $.Paginator.Pages }}
+                        <div class="resume-list__block">
+                            <h2 class="resume-list__block-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                            <p class="resume-list__block-date">{{ .Date.Format .Site.Params.dateform }}</p>
+                            {{ if isset .Params "tags" }}
+                            <ul class="tags">
+                                {{ range .Params.Tags }}
+                                <li><a class="meta" href="{{ " /tags/ " | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+                                {{ end }}
+                            </ul>
+                            {{ end }}
+                        </div>
+                        {{ end }} {{ partial "pagination.html" . }}
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Blog -->
 
