@@ -19,8 +19,8 @@
 </section>
 <!--Hello-->
 
+{{ if .Site.Params.Projects }}
 <hr>
-
 <!--Projects-->
 <section id="projects" class="container section">
     <div class="row">
@@ -30,33 +30,39 @@
     </div>
 
     <div class="portfolio-cards">
-        {{ if .Site.Params.Projects }} {{ range $project := .Site.Params.Projects }}
+        {{ range $project := .Site.Params.Projects }}
         <div class="row project-card" data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="web-sites">
+            {{ if $project.img }}
             <div class="col-md-6 col-lg-5 project-card__img">
-                <img class="" src="{{ $project.Img | absURL }}" alt="{{ $project.Name }}">
+                <img class="" src="{{ $project.img | absURL }}" alt="{{ $project.name }}">
             </div>
+            {{ end }}
             <div class="col-md-6 col-lg-7 project-card__info">
-                <h3 class="project-card__title">{{ $project.Name }}</h3>
-                <p class="project-card__description">{{ $project.Desc }}</p>
-                <a ref="nofollow" href="{{ $project.Link }}" target="_blank" class="project-card__link">{{ $project.Link }}</a>
+                <h3 class="project-card__title">{{ $project.name }}</h3>
+                <p class="project-card__description">{{ $project.desc }}</p>
+                <a ref="nofollow" href="{{ $project.link }}" target="_blank" class="project-card__link">{{ $project.link
+                    }}</a>
             </div>
         </div>
         {{ end }} {{ else }} {{ with $.Site.GetPage "section" "projects" }} {{ range .Pages.ByPublishDate }}
         <div class="row project-card" data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="web-sites">
+            {{ if .Params.Img }}
             <div class="col-md-6 col-lg-5 project-card__img">
                 <img class="" src="{{ .Params.Img | absURL }}" width="250" height="250" alt="{{ .Title }}">
             </div>
+            {{ end }}
             <div class="col-md-6 col-lg-7 project-card__info">
                 <h3 class="project-card__title">{{ .Title }}</h3>
                 <p class="project-card__description">{{ .Summary }}</p>
-                <a ref="nofollow" href="{{ .Params.Link }}" target="_blank" class="project-card__link">{{ .Params.Link }}</a>
+                <a ref="nofollow" href="{{ .Params.Link }}" target="_blank" class="project-card__link">{{ .Params.Link
+                    }}</a>
             </div>
         </div>
-        {{ end }} {{ end }} {{ end }}
-
+        {{ end }} {{ end }}
     </div>
 </section>
-<!--Portfolio-->
+<!--Projects-->
+{{ end }}
 
 <hr />
 
@@ -69,14 +75,15 @@
     </div>
 
     <div class="row post-cards">
-
-        {{ range first 3 .Data.Pages.ByPublishDate.Reverse }} {{ if eq .Section "blog" }}
+        {{ range first 3 $.Paginator.Pages.ByPublishDate.Reverse }}
         <div class="col-md-4">
-            <a href="blog.html">
+            <a href="{{ .Permalink }}">
                 <div class="post-cards__card">
                     <div class="post-cards__info">
                         <p class="post-cards__date">{{ .Date.Format .Site.Params.dateform }}</p>
-                        <h3 class="post-cards_title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                        <h3 class="post-cards_title">
+                            <a href="{{ .Permalink }}"> {{ .Title }}</a>
+                        </h3>
                         {{ if isset .Params "tags" }}
                         <ul class="tags">
                             {{ range first 2 .Params.Tags }}
@@ -88,8 +95,7 @@
                 </div>
             </a>
         </div>
-        {{ end }} {{ end }}
-
+        {{ end }}
     </div>
 </section>
 <!--Blog-->
