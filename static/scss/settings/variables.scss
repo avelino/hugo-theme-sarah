@@ -9,33 +9,27 @@ Consolas,
 monospace;
 $font-family-additional: 'Inconsolata',
 monospace;
-
 $font-size-t1: 44px;
 $font-size-t2: 36px;
 $font-size-t3: 18px;
 $font-size-t4: 16px;
 $font-size-t5: 14px;
 $font-size-t6: 12px;
-
 $line-height-t1: 50px;
 $line-height-t2: 42px;
 $line-height-t3: 30px;
 $line-height-t4: 24px;
 $line-height-t5: 20px;
 $line-height-t6: 18px;
-
-//variables for color.css (comment them if you want change style
-
-$color-text-main: #555555;
-$color-text-additional: #999999;
-$color-text-light: #ffffff;
-$color-accent: #6d56c1;
-$color-accent-additional: #7b67c7;
-$box-shadow-btn: 0px 1px 29px rgba(0, 0, 0, 0.16);
-$linear-gradient-background: linear-gradient(54deg, rgba(74, 76, 179, 0.95) 34%, rgba(207, 157, 157, 0.95) 100%);
-
+//variables for color.css (comment them if you want change style)
+$color-text-main: #282A36;
+$color-text-additional: #44475A;
+$color-text-light: #F8F8F2;
+$color-accent: #BD93F9;
+$color-accent-additional: #6272A4;
+$box-shadow-btn: 0px 1px 29px #282A36;
+$linear-gradient-background: linear-gradient(54deg, #44475A 34%, #BD93F9 100%);
 //variables for monochrome.css (uncomment if you want change style)
-
 //$color-text-main: #555555;
 //$color-text-additional: #999999;
 //$color-text-light: #ffffff;
