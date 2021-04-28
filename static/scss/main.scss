@@ -1,6 +1,8 @@
 /*------------------------------------
  #MAIN
 \*------------------------------------*/
+
+
 /**
  * SETTINGS
  * Variables...............Variables for themes.
@@ -39,26 +41,19 @@
 
 // Variables
 @import "settings/variables.scss";
-
 // Vendor
 @import "vendor/vendors-extensions.scss";
 @import "vendor/bootstrap/bootstrap.scss";
 @import "vendor/font-awesome/font-awesome.scss";
-
 // Main
 @import "settings/fonts.scss";
-
 @import "tools/mixins.scss";
-
 @import "generic/normalize.scss";
 @import "generic/box-sizing.scss";
-
 @import "base/scaffolding.scss";
 @import "base/type.scss";
-
 @import "objects/media.scss";
 @import "objects/animations.scss";
-
 // Components
 @import "components/personal-profile.scss";
 @import "components/main-header.scss";
@@ -72,6 +67,7 @@
 @import "components/background";
 @import "components/contacts.scss";
 @import "components/footer.scss";
+@import "components/image.scss";
 @import "components/progress-list.scss";
 @import "components/portfolio-modal.scss";
 @import "components/tags.scss";
@@ -82,10 +78,8 @@
 @import "components/slider-carousel.scss";
 @import "components/mobile-menu.scss";
 @import "components/style-switcher.scss";
-
 // Obj
 @import "objects/layout.scss";
-
 // Utils
 @import "utilities/helpers.scss";
 @import "utilities/states.scss";
