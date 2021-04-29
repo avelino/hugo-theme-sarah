@@ -1,93 +1,85 @@
 html {
-  // IE11 & Edge make the scrollbar overlap the content and automatically hide itself when not in use.
-  -ms-overflow-style: scrollbar;
-  // Changes the default tap highlight to be completely transparent in iOS.
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    // IE11 & Edge make the scrollbar overlap the content and automatically hide itself when not in use.
+    -ms-overflow-style: scrollbar;
+    // Changes the default tap highlight to be completely transparent in iOS.
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
-  font-family: $font-family-main;
-  font-size: $font-size-t3;
-  font-weight: $font-weight-base;
-  line-height: $line-height-t3;
-  color: $color-text-main;
+    font-family: $font-family-main;
+    font-size: $font-size-t3;
+    font-weight: $font-weight-base;
+    line-height: $line-height-t3;
+    color: $color-text-main;
 }
 
 // Links
 a {
-  color: $color-accent;
-  transition: all 0.3s;
-  position: relative;
-  text-decoration: none;
-  cursor: pointer;
-
-  &:visited {
-    //color: $color-link--visited;
-  }
-
-  &:hover,
-  &:focus,
-  a:active {
     color: $color-accent;
-    text-decoration: underline;
-  }
+    transition: all 0.3s;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    &:visited {
+        //color: $color-link--visited;
+    }
+    &:hover,
+    &:focus,
+    a:active {
+        color: $color-accent;
+        text-decoration: underline;
+    }
 }
 
 nav {
-  font-size: $font-size-t6;
-  line-height: $line-height-t6;
-  font-family: $font-family-title;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 30px;
-
-  ul {
-    li {
-      display: inline-block;
-
-      a {
-        padding-right: 50px;
-        color: $color-text-additional;
-
-        &:after {
-          content: "";
-          position: absolute;
-          width: 7px;
-          height: 2px;
-          bottom: 0px;
-          right: 42px;
-          opacity: 0;
-          transition: background 0.3s;
-          background: $color-accent;
+    font-size: $font-size-t6;
+    line-height: $line-height-t6;
+    font-family: $font-family-title;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 30px;
+    ul {
+        li {
+            display: inline-block;
+            a {
+                padding-right: 50px;
+                color: $color-text-additional;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 7px;
+                    height: 2px;
+                    bottom: 0px;
+                    right: 42px;
+                    opacity: 0;
+                    transition: background 0.3s;
+                    background: $color-accent;
+                }
+                &:hover {
+                    text-decoration: none;
+                    transition: all .15s;
+                    color: $color-accent;
+                }
+                &:hover:after {
+                    opacity: 1;
+                }
+            }
         }
-
-        &:hover {
-          text-decoration: none;
-          transition: all .15s;
-          color: $color-accent;
-        }
-
-        &:hover:after {
-          opacity: 1;
-        }
-      }
     }
-  }
 }
-
 
 // Buttons
 input[type="button"],
 button {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 h1,
@@ -96,43 +88,42 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 50px 0px 50px -25px;
+    margin: 50px 0px 50px -25px;
 }
 
 .resume-list__block h2,
 .post-cards_title {
-  margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 p {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 ul.tags .next {
-  position: absolute;
-  right: 5px;
+    position: absolute;
+    right: 5px;
 }
 
 @media (max-width: 600px) {
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 50px 0px 50px 0px;
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 50px 0px 50px 0px;
+    }
 }
 
 blockquote {
-  padding: .5rem 1rem;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-  border-left: .25rem solid #eceeef;
-
-  p {
-    margin-top: 0;
-    margin-bottom: 0 !important;
-  }
+    padding: .5rem 1rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    border-left: .25rem solid #FF79C6;
+    p {
+        margin-top: 0;
+        margin-bottom: 0 !important;
+    }
 }
