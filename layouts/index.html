@@ -39,8 +39,7 @@
             <div class="col-md-6 col-lg-7 project-card__info">
                 <h3 class="project-card__title">{{ $project.name }}</h3>
                 <p class="project-card__description">{{ $project.desc }}</p>
-                <a ref="nofollow" href="{{ $project.link }}" target="_blank" class="project-card__link">{{ $project.link
-                    }}</a>
+                <a ref="nofollow" href="{{ $project.link }}" target="_blank" class="project-card__link">{{ $project.link }}</a>
             </div>
         </div>
         {{ end }} {{ else }} {{ with $.Site.GetPage "section" "projects" }} {{ range .Pages.ByPublishDate }}
