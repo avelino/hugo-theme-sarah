@@ -135,6 +135,7 @@ link = "https://awesome-go.com/"
 | [Slide Share](https://www.slideshare.net/) | `{{< slideshare 2DLd4OvBUeGT2M  >}}`                   |
 | [scribd](https://scribd.com)               | `{{< scribd 439578708 >}}`                             |
 | [Google Maps](https://maps.google.com/)    | `{{< googlemaps 1vmr0dHs0fWQ0Q6w_va_G2BYbcCfFsprM >}}` |
+| [GitHub Repo](https://github.com/)    | `{{< github avelino/awesome-go >}}` |
 
 ## Screenshots
 
