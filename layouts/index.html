@@ -2,61 +2,61 @@
 
 <!--Header-->
 <header class="main-header">
-    {{ partial "personal-header.html" . }}
+  {{ partial "personal-header.html" . }}
 </header>
 <!--Header-->
 
 <!--Hello-->
 <section id="hello" class="container section">
-    <div class="row">
-        <div class="col-md-10">
-            <h2 id="hello_header" class="section__title">Hi_</h2>
-            <p class="section__description">
-                {{ if .Site.Params.AboutFile }} {{ with $.Site.GetPage "page" .Site.Params.AboutFile }} {{ .Content }} {{ end }} {{ else }} {{ .Site.Params.About | markdownify }} {{ end }}
-            </p>
-        </div>
+  <div class="row">
+    <div class="col-md-10">
+      <h2 id="hello_header" class="section__title">👋 Hello Everyone_ </h2>
+      <p class="section__description">
+        {{ if .Site.Params.AboutFile }} {{ with $.Site.GetPage "page" .Site.Params.AboutFile }} {{ .Content }} {{ end }} {{ else }} {{ .Site.Params.About | markdownify }} {{ end }}
+      </p>
     </div>
+  </div>
 </section>
 <!--Hello-->
 
 <hr>
 <!--Projects-->
 <section id="projects" class="container section">
-    <div class="row">
-        <div class="col-md-12">
-            <h2 id="portfolio_header" class="section__title">My projects_</h2>
-        </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="portfolio_header" class="section__title">My projects_</h2>
     </div>
+  </div>
 
-    <div class="portfolio-cards">
-        {{ if .Site.Params.Projects }} {{ range $project := .Site.Params.Projects }}
-        <div class="row project-card" data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="web-sites">
-            {{ if $project.img }}
-            <div class="col-md-6 col-lg-5 project-card__img">
-                <img class="" src="{{ $project.img | absURL }}" alt="{{ $project.name }}">
-            </div>
-            {{ end }}
-            <div class="col-md-6 col-lg-7 project-card__info">
-                <h3 class="project-card__title">{{ $project.name }}</h3>
-                <p class="project-card__description">{{ $project.desc }}</p>
-                <a ref="nofollow" href="{{ $project.link }}" target="_blank" class="project-card__link">{{ $project.link }}</a>
-            </div>
-        </div>
-        {{ end }} {{ else }} {{ with $.Site.GetPage "section" "projects" }} {{ range .Pages.ByPublishDate }}
-        <div class="row project-card" data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="web-sites">
-            {{ if .Params.Img }}
-            <div class="col-md-6 col-lg-5 project-card__img">
-                <img class="" src="{{ .Params.Img | absURL }}" width="250" height="250" alt="{{ .Title }}">
-            </div>
-            {{ end }}
-            <div class="col-md-6 col-lg-7 project-card__info">
-                <h3 class="project-card__title">{{ .Title }}</h3>
-                <p class="project-card__description">{{ .Summary }}</p>
-                <a ref="nofollow" href="{{ .Params.Link }}" target="_blank" class="project-card__link">{{ .Params.Link }}</a>
-            </div>
-        </div>
-        {{ end }} {{ end }}{{ end }}
+  <div class="portfolio-cards">
+    {{ if .Site.Params.Projects }} {{ range $project := .Site.Params.Projects }}
+    <div class="row project-card" data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="web-sites">
+      {{ if $project.img }}
+      <div class="col-md-6 col-lg-5 project-card__img">
+        <img src="{{ $project.img | absURL }}" alt="{{ $project.name }}">
+      </div>
+      {{ end }}
+      <div class="col-md-6 col-lg-7 project-card__info">
+        <h3 class="project-card__title">{{ $project.name }}</h3>
+        <p class="project-card__description">{{ $project.desc }}</p>
+        <a ref="nofollow" href="{{ $project.link }}" target="_blank" class="project-card__link">{{ $project.link }}</a>
+      </div>
     </div>
+    {{ end }} {{ else }} {{ with $.Site.GetPage "section" "projects" }} {{ range .Pages.ByPublishDate }}
+    <div class="row project-card" data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="web-sites">
+      {{ if .Params.Img }}
+      <div class="col-md-6 col-lg-5 project-card__img">
+        <img class="" src="{{ .Params.Img | absURL }}" width="250" height="250" alt="{{ .Title }}">
+      </div>
+      {{ end }}
+      <div class="col-md-6 col-lg-7 project-card__info">
+        <h3 class="project-card__title">{{ .Title }}</h3>
+        <p class="project-card__description">{{ .Summary }}</p>
+        <a ref="nofollow" href="{{ .Params.Link }}" target="_blank" class="project-card__link">{{ .Params.Link }}</a>
+      </div>
+    </div>
+    {{ end }} {{ end }}{{ end }}
+  </div>
 </section>
 <!--Projects-->
 
@@ -64,35 +64,35 @@
 
 <!--Blog-->
 <section id="blog" class="container section">
-    <div class="row">
-        <div class="col-md-12">
-            <h2 id="blog_header" class="section__title">Latest Posts_</h2>
-        </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="blog_header" class="section__title">Latest Posts_</h2>
     </div>
+  </div>
 
-    <div class="row post-cards">
-        {{ range first 3 $.Paginator.Pages.ByPublishDate.Reverse }}
-        <div class="col-md-4">
-            <a href="{{ .Permalink }}">
-                <div class="post-cards__card">
-                    <div class="post-cards__info">
-                        <p class="post-cards__date">{{ .Date.Format .Site.Params.dateform }}</p>
-                        <h3 class="post-cards_title">
-                            <a href="{{ .Permalink }}"> {{ .Title }}</a>
-                        </h3>
-                        {{ if isset .Params "tags" }}
-                        <ul class="tags">
-                            {{ range first 2 .Params.Tags }}
-                            <li><a class="meta" href="{{ " /tags/ " | relURL }}{{ . | urlize }}">{{ . }}</a></li>
-                            {{ end }}
-                        </ul>
-                        {{ end }}
-                    </div>
-                </div>
-            </a>
+  <div class="row post-cards">
+    {{ range first 3 $.Paginator.Pages.ByPublishDate.Reverse }}
+    <div class="col-md-4">
+      <a href="{{ .Permalink }}">
+        <div class="post-cards__card">
+          <div class="post-cards__info">
+            <p class="post-cards__date">{{ .Date.Format .Site.Params.dateform }}</p>
+            <h3 class="post-cards_title">
+              <a href="{{ .Permalink }}"> {{ .Title }}</a>
+            </h3>
+            {{ if isset .Params "tags" }}
+            <ul class="tags">
+              {{ range first 2 .Params.Tags }}
+              <li><a class="meta" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </div>
         </div>
-        {{ end }}
+      </a>
     </div>
+    {{ end }}
+  </div>
 </section>
 <!--Blog-->
 
