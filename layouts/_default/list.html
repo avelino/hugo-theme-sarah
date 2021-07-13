@@ -30,7 +30,7 @@
                             {{ if isset .Params "tags" }}
                             <ul class="tags">
                                 {{ range .Params.Tags }}
-                                <li><a class="meta" href="{{ " /tags/ " | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+                                <li><a class="meta" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
                                 {{ end }}
                             </ul>
                             {{ end }}
