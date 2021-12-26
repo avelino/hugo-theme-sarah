@@ -1,16 +1,78 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Site.LanguageCode }}">
 
-<head>
+<head itemscope itemtype="{{ .Site.BaseURL }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> {{ partial "meta.html" . }} {{ if .Site.Params.Author }} {{ with .Site.Params.Author }}
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <!-- All the meta tags below will come under this meta partial -->
+    {{ partial "meta.html" . }} {{ if .Site.Params.Author }} {{ with .Site.Params.Author }}
     <meta name="author" content="{{ . }}">{{ end }} {{ end }}
-    <base href="{{ .Site.BaseURL }}">
-    <link rel="canonical" href="{{ .Permalink }}"> {{ .Hugo.Generator }}
-
+    <base href="{{ .Permalink }}">
+    <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+    <meta name="url" content="{{ .Permalink }}" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" /> {{ .Hugo.Generator }}
+    <!-- Manifest File -->
+    <link rel="manifest" href="{{ .Site.BaseURL }}manifest.json" />
+    <meta name="language" content="{{ .Language.LanguageName }}">
+    <!-- All Translations -->
+    {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}"> {{ end }}
+    <meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
+    <!-- ld+json -->
+    {{ if .Site.Params.Description }}
+    <script defer type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Article",
+            "headline": {
+                {.Title
+                }
+            },
+            "author": {
+                "@type": "Person",
+                "name": "{{ .Site.Params.github }}"
+            },
+            "datePublished": "{{ .Date.Format "
+            2006 - 01 - 02 " }}",
+            "description": {
+                {.Description
+                }
+            },
+            "wordCount": {
+                {.WordCount
+                }
+            },
+            "mainEntityOfPage": "True",
+            "dateModified": "{{ .Lastmod.Format "
+            2006 - 01 - 02 " }}",
+            "image": {
+                "@type": "imageObject",
+                "url": "{{ with .Params.image }}{{ .Permalink }}{{ end }}"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "{{ .Site.Title }}",
+            }
+        }
+    </script>
+    {{else}}
+    <script defer type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "{{ .Permalink }}",
+            "sameAs": [
+                "{{ .Site.Params.github }}"
+            ],
+            "name": "{{ .Title }}",
+        }
+    </script>
+    {{end}}
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}index.xml" title="{{ .Site.Title | safeHTML }}" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}sitemap.xml" />
 
     <!-- CSS -->
     <link href="{{ .Site.BaseURL }}css/main.min.css?hash={{ now.Unix }}" rel="preload" as="style">

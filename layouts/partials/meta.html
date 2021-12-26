@@ -1,12 +1,55 @@
 {{ if .Title }} {{ if ne .Title .Site.Title}}
-<title>{{ .Title }} - {{ .Site.Title }}</title>
+<!-- start title -->
+<title itemprop="name">{{ .Title }} - {{ .Site.Title }}</title>
+<meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
+<!-- end title -->
 {{ else }}
-<title>{{ if .Site.Params.Description }}{{ .Site.Params.Description }} - {{ end }}{{ .Site.Title }}</title>
+<!-- start title -->
+<title itemprop="name">{{ if .Site.Params.Description }}{{ .Site.Params.Description }} - {{ end }}{{ .Site.Title }}</title>
+<meta itemprop="name" content="{{ if .Site.Params.Description }}{{ .Site.Params.Description }} - {{ end }}{{ .Site.Title }}" />
+<meta name="application-name" content="{{ if .Site.Params.Description }}{{ .Site.Params.Description }} - {{ end }}{{ .Site.Title }}" />
+<!-- end title -->
 {{ end }} {{ else }}
-<title>{{ if .Site.Params.Description }}{{ .Site.Params.Description }} - {{ end }}{{ .Site.Title }}</title>
-{{ end }} {{ if .Params.Tags }}
-<meta name="keywords" content="{{ range $index, $tag := .Params.Tags }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}"> {{ else }} {{ if .Site.Params.Keywords }}
-<meta name="keywords" content="{{ range $index, $tag := .Site.Params.Keywords }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}"> {{end}} {{ end }} {{ if .IsPage }} {{ if .Description }}
-<meta name="description" content="{{ .Description }}"> {{ else }}
-<meta name="description" content="{{ .Summary }}"> {{ end }} {{ else }}
-<meta name="description" content="{{ .Site.Params.Description }}"> {{ end }} {{ template "_internal/opengraph.html" . }} {{ template "_internal/twitter_cards.html" . }} {{ template "_internal/google_news.html" . }}
+<!-- start title -->
+<title itemprop="name">{{ if .Site.Params.Description }}{{ .Site.Params.Description }} - {{ end }}{{ .Site.Title }}</title>
+<meta itemprop="name" content="{{ if .Site.Params.Description }}{{ .Site.Params.Description }} - {{ end }}{{ .Site.Title }}" />
+<meta name="application-name" content="{{ if .Site.Params.Description }}{{ .Site.Params.Description }} - {{ end }}{{ .Site.Title }}" />
+<!-- end title -->
+{{ end }}
+<meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
+<!-- tags params -->
+{{ if .Params.Tags }}
+<meta name="keywords" content="{{ range $index, $tag := .Params.Tags }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}">{{ else }} {{ if .Site.Params.Keywords }}
+<meta name="keywords" content="{{ range $index, $tag := .Site.Params.Keywords }}{{ if $index }},{{ end }}{{ $tag }}{{ end }}"> {{end}} {{ end }} {{ if .IsPage }}
+<!-- description -->
+{{ if .Description }}
+<meta name="description" content="{{ .Description }}">
+<meta itemprop="description" content="{{ .Description }}" />
+<!-- end description -->
+{{ else }}
+<meta name="description" content="{{ .Summary }}">
+<meta itemprop="description" content="{{ .Summary }}" />
+<!-- end description -->
+{{ end }} {{ else }}
+<meta name="description" content="{{ .Site.Params.Description }}">
+<meta itemprop="description" content="{{ .Params.description }}" />
+<!-- end description -->
+{{ end }}
+<!-- opengraph -->
+{{ template "_internal/opengraph.html" . }}
+<!-- twitter cards -->
+{{ template "_internal/twitter_cards.html" . }}
+<!-- google news -->
+{{ template "_internal/google_news.html" . }}
+
+<meta name="keywords" content="" />
+<meta name="imagemode" content="force" />
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Params.sitename }}" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-touch-fullscreen" content="yes" />
