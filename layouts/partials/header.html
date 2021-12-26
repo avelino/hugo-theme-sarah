@@ -26,27 +26,16 @@
         {
             "@context": "http://schema.org",
             "@type": "Article",
-            "headline": {
-                {.Title
-                }
-            },
+            "headline": "{{.Title}}",
             "author": {
                 "@type": "Person",
                 "name": "{{ .Site.Params.github }}"
             },
-            "datePublished": "{{ .Date.Format "
-            2006 - 01 - 02 " }}",
-            "description": {
-                {.Description
-                }
-            },
-            "wordCount": {
-                {.WordCount
-                }
-            },
+            "datePublished": "{{ .Date.Format "2006-01-02" }}",
+            "description": "{{.Description}}",
+            "wordCount": "{{.WordCount}}",
             "mainEntityOfPage": "True",
-            "dateModified": "{{ .Lastmod.Format "
-            2006 - 01 - 02 " }}",
+            "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
             "image": {
                 "@type": "imageObject",
                 "url": "{{ with .Params.image }}{{ .Permalink }}{{ end }}"
