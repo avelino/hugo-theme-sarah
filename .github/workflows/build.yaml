@@ -1,4 +1,4 @@
-name: Grunt build and commit updated stylesheets (main/master branch)
+name: Grunt build and commit updated stylesheets (main branch)
 
 on: [push, pull_request]
 
