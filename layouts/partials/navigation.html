@@ -1,7 +1,8 @@
 <!--Main menu-->
 {{define "nav"}} {{ range .Site.Sections }}
+{{if ne .Title "Projects" }}
 <li><a href="{{ .Permalink }}#content" alt="content {{ .Title }}">{{ .Title }}</a></li>
-{{ end }} {{end}}
+{{ end }} {{ end }} {{end}}
 <div class="menu">
     <div class="container">
         <div class="row">
