@@ -1,4 +1,5 @@
-{{ partial "header.html" . }} {{ partial "navigation.html" . }}
+{{ partial "header.html" . }}
+{{ partial "navigation.html" . }}
 
 <!--Header-->
 <header class="background blog-header"></header>
@@ -13,9 +14,12 @@
 
                 <h1 class="article__title">{{ .Title }}</h1>
                 <p class="article_date">
-                    {{ .Date.Format .Site.Params.dateform }} | {{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}
+                    {{ .Date.Format .Site.Params.dateform }} | ~{{ if eq 1 .ReadingTime }}{{ .ReadingTime }} minute read{{ else }}{{ .ReadingTime }} minutes read{{ end }}
                 </p>
-                {{ partial "share.html" . }} {{ .Content }} {{ partial "share.html" . }} {{ template "_internal/disqus.html" . }}
+                {{ partial "share.html" . }}
+                {{ .Content }}
+                {{ partial "share.html" . }}
+                {{ template "_internal/disqus.html" . }}
             </div>
         </div>
     </div>

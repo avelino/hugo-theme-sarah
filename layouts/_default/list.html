@@ -1,4 +1,5 @@
-{{ partial "header.html" . }} {{ partial "navigation.html" . }}
+{{ partial "header.html" . }}
+{{ partial "navigation.html" . }}
 
 <!--Header-->
 <header class="background blog-header"></header>
@@ -15,14 +16,17 @@
                     <div class="col-md-12">
                         <h1 id="blog_header" class="section__title"><a href="{{ .Section | relURL }}" alt="{{ .Section }}">{{ .Section }}</a>: Latest Posts_</h1>
                         <p id="description">
-                            {{if isset $.Site.Data.contents "descriptions"}} {{if isset $.Site.Data.contents.descriptions .Section}} {{index $.Site.Data.contents.descriptions .Section}} {{end}} {{end}}
+                            {{if isset $.Site.Data.contents "descriptions"}}
+                            {{if isset $.Site.Data.contents.descriptions .Section}}
+                            {{index $.Site.Data.contents.descriptions .Section}}
+                            {{end}}
+                            {{end}}
                         </p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-8 section__resume resume-list">
-
                         {{ range $index, $element := $.Paginator.Pages }}
                         <div class="resume-list__block">
                             <h2 class="resume-list__block-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
@@ -35,8 +39,8 @@
                             </ul>
                             {{ end }}
                         </div>
-                        {{ end }} {{ partial "pagination.html" . }}
-
+                        {{ end }}
+                        {{ partial "pagination.html" . }}
                     </div>
                 </div>
             </div>
