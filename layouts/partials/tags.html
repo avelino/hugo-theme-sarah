@@ -1,0 +1,9 @@
+<p class="article__tags">
+{{ if isset .Params "tags" }}
+    <ul class="tags">
+        {{ range .Params.Tags }}
+        <li><a class="meta" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
+        {{ end }}
+    </ul>
+{{ end }}
+</p>

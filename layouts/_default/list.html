@@ -31,13 +31,7 @@
                         <div class="resume-list__block">
                             <h2 class="resume-list__block-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
                             <p class="resume-list__block-date">{{ .Date.Format .Site.Params.dateform }}</p>
-                            {{ if isset .Params "tags" }}
-                            <ul class="tags">
-                                {{ range .Params.Tags }}
-                                <li><a class="meta" href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a></li>
-                                {{ end }}
-                            </ul>
-                            {{ end }}
+                            {{ partial "tags.html" . }}
                         </div>
                         {{ end }}
                         {{ partial "pagination.html" . }}
