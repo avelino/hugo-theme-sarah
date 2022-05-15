@@ -70,6 +70,8 @@
     <link href="{{ .Site.BaseURL }}css/highlightjs-dracula.css?hash={{ now.Unix }}" rel="stylesheet" media="print" onload="this.media='all'">
     <!-- CSS - Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Inconsolata" rel="stylesheet" media="print" onload="this.media='all'">
+
+    {{ partial "microsoft-clarity.html" . }}
 </head>
 
 <body lang="{{ .Site.LanguageCode }}">

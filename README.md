@@ -33,18 +33,19 @@ gulp build
 
 #### [params]
 
-| key             | description                                                                                               |
-| --------------- | --------------------------------------------------------------------------------------------------------- |
-| author          | Author name                                                                                               |
-| keywords        | Keywords list                                                                                             |
-| description     | Site description with up to 160 characters, used on the initial page for indexing in search engines (SEO) |
-| avatar          | Author picture                                                                                            |
-| dateform        | Date format ([read more](https://discourse.gohugo.io/t/date-time-format-in-config-toml/5268/2))           |
-| lang            | Language that the main content will be written                                                            |
-| footertext      | Text at the end of the page (All rights reserved)                                                         |
-| googleAnalytics | Google Analytics ID                                                                                       |
-| aboutFile       | Set markdow file, show on homepage                                                                        |
-| about           | Author text, show on homepage                                                                             |
+| key | description |
+| --- | --- |
+| author | Author name |
+| keywords | Keywords list |
+| description | Site description with up to 160 characters, used on the initial page for indexing in search engines (SEO) |
+| avatar | Author picture |
+| dateform | Date format ([read more](https://discourse.gohugo.io/t/date-time-format-in-config-toml/5268/2)) |
+| lang | Language that the main content will be written |
+| footertext | Text at the end of the page (All rights reserved) |
+| googleAnalytics | Google Analytics ID |
+| aboutFile | Set markdow file, show on homepage |
+| about | Author text, show on homepage |
+| microsoftClarity | Microsoft Clarity ID |
 
 #### [params.social]
 
