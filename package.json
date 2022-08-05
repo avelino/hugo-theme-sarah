@@ -17,6 +17,6 @@
         "is-svg": ">=4.3.2",
         "lodash.template": ">=4.5.0",
         "node.extend": ">=2.0.2",
-        "sass": "^1.51.0"
+        "sass": "^1.54.3"
     }
 }
